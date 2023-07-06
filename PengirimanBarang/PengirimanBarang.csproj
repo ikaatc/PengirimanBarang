@@ -64,6 +64,12 @@
     <Compile Include="karyawan.Designer.cs">
       <DependentUpon>karyawan.cs</DependentUpon>
     </Compile>
+    <Compile Include="kurir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kurir.Designer.cs">
+      <DependentUpon>kurir.cs</DependentUpon>
+    </Compile>
     <Compile Include="pengirim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="karyawan.resx">
       <DependentUpon>karyawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kurir.resx">
+      <DependentUpon>kurir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pengirim.resx">
       <DependentUpon>pengirim.cs</DependentUpon>

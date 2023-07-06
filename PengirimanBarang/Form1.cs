@@ -31,5 +31,10 @@ namespace PengirimanBarang
         {
 
         }
+
+        private void databarang_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -91,6 +91,7 @@ namespace PengirimanBarang
             this.databarang.Name = "databarang";
             this.databarang.Size = new System.Drawing.Size(321, 50);
             this.databarang.Text = "Data Barang";
+            this.databarang.Click += new System.EventHandler(this.databarang_Click);
             // 
             // datapenerima
             // 

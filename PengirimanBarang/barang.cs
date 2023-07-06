@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace PengirimanBarang
 {
-    public partial class pengirim : Form
+    public partial class barang : Form
     {
-        public pengirim()
+        public barang()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void notelppengirim_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

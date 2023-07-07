@@ -33,13 +33,13 @@ namespace PengirimanBarang
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.datapengirim = new System.Windows.Forms.ToolStripMenuItem();
-            this.datakaryawan = new System.Windows.Forms.ToolStripMenuItem();
             this.databarang = new System.Windows.Forms.ToolStripMenuItem();
-            this.datapenerima = new System.Windows.Forms.ToolStripMenuItem();
+            this.datakaryawan = new System.Windows.Forms.ToolStripMenuItem();
             this.datakurir = new System.Windows.Forms.ToolStripMenuItem();
+            this.datapenerima = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.dataresi = new System.Windows.Forms.ToolStripMenuItem();
             this.datapengiriman = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.datapengantaran = new System.Windows.Forms.ToolStripMenuItem();
             this.datadetail = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
@@ -53,7 +53,8 @@ namespace PengirimanBarang
             this.toolStripDropDownButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 50);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1067, 50);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -79,12 +80,7 @@ namespace PengirimanBarang
             this.datapengirim.Name = "datapengirim";
             this.datapengirim.Size = new System.Drawing.Size(321, 50);
             this.datapengirim.Text = "Data Pengirim";
-            // 
-            // datakaryawan
-            // 
-            this.datakaryawan.Name = "datakaryawan";
-            this.datakaryawan.Size = new System.Drawing.Size(321, 50);
-            this.datakaryawan.Text = "Data Karyawan";
+            this.datapengirim.Click += new System.EventHandler(this.datapengirim_Click);
             // 
             // databarang
             // 
@@ -93,29 +89,26 @@ namespace PengirimanBarang
             this.databarang.Text = "Data Barang";
             this.databarang.Click += new System.EventHandler(this.databarang_Click);
             // 
-            // datapenerima
+            // datakaryawan
             // 
-            this.datapenerima.Name = "datapenerima";
-            this.datapenerima.Size = new System.Drawing.Size(321, 50);
-            this.datapenerima.Text = "Data Penerima";
+            this.datakaryawan.Name = "datakaryawan";
+            this.datakaryawan.Size = new System.Drawing.Size(321, 50);
+            this.datakaryawan.Text = "Data Karyawan";
+            this.datakaryawan.Click += new System.EventHandler(this.datakaryawan_Click);
             // 
             // datakurir
             // 
             this.datakurir.Name = "datakurir";
             this.datakurir.Size = new System.Drawing.Size(321, 50);
             this.datakurir.Text = "Data Kurir";
+            this.datakurir.Click += new System.EventHandler(this.datakurir_Click);
             // 
-            // dataresi
+            // datapenerima
             // 
-            this.dataresi.Name = "dataresi";
-            this.dataresi.Size = new System.Drawing.Size(402, 50);
-            this.dataresi.Text = "Data Resi";
-            // 
-            // datapengiriman
-            // 
-            this.datapengiriman.Name = "datapengiriman";
-            this.datapengiriman.Size = new System.Drawing.Size(402, 50);
-            this.datapengiriman.Text = "Data Pengiriman";
+            this.datapenerima.Name = "datapenerima";
+            this.datapenerima.Size = new System.Drawing.Size(321, 50);
+            this.datapenerima.Text = "Data Penerima";
+            this.datapenerima.Click += new System.EventHandler(this.datapenerima_Click);
             // 
             // toolStripDropDownButton2
             // 
@@ -132,6 +125,18 @@ namespace PengirimanBarang
             this.toolStripDropDownButton2.Size = new System.Drawing.Size(254, 45);
             this.toolStripDropDownButton2.Text = "Data Pengiriman";
             // 
+            // dataresi
+            // 
+            this.dataresi.Name = "dataresi";
+            this.dataresi.Size = new System.Drawing.Size(402, 50);
+            this.dataresi.Text = "Data Resi";
+            // 
+            // datapengiriman
+            // 
+            this.datapengiriman.Name = "datapengiriman";
+            this.datapengiriman.Size = new System.Drawing.Size(402, 50);
+            this.datapengiriman.Text = "Data Pengiriman";
+            // 
             // datapengantaran
             // 
             this.datapengantaran.Name = "datapengantaran";
@@ -146,10 +151,13 @@ namespace PengirimanBarang
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.toolStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.toolStrip1.ResumeLayout(false);

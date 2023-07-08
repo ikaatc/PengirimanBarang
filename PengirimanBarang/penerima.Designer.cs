@@ -37,7 +37,7 @@
             this.almtpenerima = new System.Windows.Forms.Label();
             this.idpenerima = new System.Windows.Forms.Label();
             this.nmpenerima = new System.Windows.Forms.Label();
-            this.txtidpenerima = new System.Windows.Forms.TextBox();
+            this.txtpenerima = new System.Windows.Forms.TextBox();
             this.txtnmpenerima = new System.Windows.Forms.TextBox();
             this.txtalmtpenerima = new System.Windows.Forms.TextBox();
             this.txtnopenerima = new System.Windows.Forms.TextBox();
@@ -111,7 +111,7 @@
             this.tableLayoutPanel1.Controls.Add(this.almtpenerima, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.idpenerima, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.nmpenerima, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtidpenerima, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtpenerima, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtnmpenerima, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtalmtpenerima, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtnopenerima, 1, 3);
@@ -167,15 +167,15 @@
             this.nmpenerima.Text = "Nama";
             this.nmpenerima.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtidpenerima
+            // txtpenerima
             // 
-            this.txtidpenerima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtidpenerima.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidpenerima.Location = new System.Drawing.Point(377, 6);
-            this.txtidpenerima.Margin = new System.Windows.Forms.Padding(4);
-            this.txtidpenerima.Name = "txtidpenerima";
-            this.txtidpenerima.Size = new System.Drawing.Size(366, 30);
-            this.txtidpenerima.TabIndex = 3;
+            this.txtpenerima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtpenerima.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpenerima.Location = new System.Drawing.Point(377, 6);
+            this.txtpenerima.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpenerima.Name = "txtpenerima";
+            this.txtpenerima.Size = new System.Drawing.Size(366, 30);
+            this.txtpenerima.TabIndex = 3;
             // 
             // txtnmpenerima
             // 
@@ -280,7 +280,7 @@
         private System.Windows.Forms.Label idpenerima;
         private System.Windows.Forms.Label nopenerima;
         private System.Windows.Forms.Label nmpenerima;
-        private System.Windows.Forms.TextBox txtidpenerima;
+        private System.Windows.Forms.TextBox txtpenerima;
         private System.Windows.Forms.TextBox txtnmpenerima;
         private System.Windows.Forms.TextBox txtalmtpenerima;
         private System.Windows.Forms.Label datapenerima;

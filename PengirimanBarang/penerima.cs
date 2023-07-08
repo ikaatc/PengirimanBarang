@@ -21,6 +21,20 @@ namespace PengirimanBarang
             InitializeComponent();
         }
 
+        private void refreshform()
+        {
+            txtpenerima.Text = "";
+            txtpenerima.Enabled = false;
+            txtnmpenerima.Text = "";
+            txtnmpenerima.Enabled = false;
+            txtalmtpenerima.Text = "";
+            txtalmtpenerima.Enabled = false;
+            txtnopenerima.Text = "";
+            txtnopenerima.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+        }
+
         private void penerima_Load(object sender, EventArgs e)
         {
 

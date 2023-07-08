@@ -18,6 +18,8 @@ namespace PengirimanBarang
         public karyawan()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void dataGridView()
@@ -75,6 +77,11 @@ namespace PengirimanBarang
         }
 
         private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
+
+        private void karyawan_Load(object sender, EventArgs e)
         {
             refreshform();
         }

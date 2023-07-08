@@ -235,6 +235,7 @@ namespace PengirimanBarang
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "karyawan";
             this.Text = "karyawan";
+            this.Load += new System.EventHandler(this.karyawan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

@@ -16,5 +16,14 @@ namespace PengirimanBarang
         {
             InitializeComponent();
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtkaryawan.Enabled = true;
+            txtnmkaryawan.Enabled = true;
+            txtnokaryawan.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+        }
     }
 }

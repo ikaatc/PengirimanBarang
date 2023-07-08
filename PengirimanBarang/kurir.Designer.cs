@@ -50,8 +50,8 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(135, 79);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(135, 80);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -62,7 +62,7 @@
             // 
             this.btnback.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnback.Location = new System.Drawing.Point(16, 15);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(112, 41);
             this.btnback.TabIndex = 29;
@@ -73,7 +73,7 @@
             // 
             this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclear.Location = new System.Drawing.Point(736, 506);
-            this.btnclear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnclear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(112, 41);
             this.btnclear.TabIndex = 28;
@@ -84,7 +84,7 @@
             // 
             this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsave.Location = new System.Drawing.Point(468, 506);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(112, 41);
             this.btnsave.TabIndex = 27;
@@ -95,7 +95,7 @@
             // 
             this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.Location = new System.Drawing.Point(183, 506);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(112, 41);
             this.btnadd.TabIndex = 26;
@@ -115,8 +115,8 @@
             this.tableLayoutPanel1.Controls.Add(this.txtalmtkurir, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtnokurir, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.nokurir, 0, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(135, 321);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(135, 320);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.53764F));
@@ -124,7 +124,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(747, 178);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(747, 179);
             this.tableLayoutPanel1.TabIndex = 25;
             // 
             // almtkurir
@@ -132,7 +132,7 @@
             this.almtkurir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.almtkurir.AutoSize = true;
             this.almtkurir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.almtkurir.Location = new System.Drawing.Point(4, 98);
+            this.almtkurir.Location = new System.Drawing.Point(4, 99);
             this.almtkurir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.almtkurir.Name = "almtkurir";
             this.almtkurir.Size = new System.Drawing.Size(365, 25);
@@ -158,7 +158,7 @@
             this.nmkurir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.nmkurir.AutoSize = true;
             this.nmkurir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmkurir.Location = new System.Drawing.Point(4, 52);
+            this.nmkurir.Location = new System.Drawing.Point(4, 53);
             this.nmkurir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nmkurir.Name = "nmkurir";
             this.nmkurir.Size = new System.Drawing.Size(365, 25);
@@ -170,8 +170,8 @@
             // 
             this.txtkurir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtkurir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtkurir.Location = new System.Drawing.Point(377, 6);
-            this.txtkurir.Margin = new System.Windows.Forms.Padding(4);
+            this.txtkurir.Location = new System.Drawing.Point(377, 7);
+            this.txtkurir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtkurir.Name = "txtkurir";
             this.txtkurir.Size = new System.Drawing.Size(366, 30);
             this.txtkurir.TabIndex = 3;
@@ -180,8 +180,8 @@
             // 
             this.txtnmkurir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtnmkurir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnmkurir.Location = new System.Drawing.Point(377, 49);
-            this.txtnmkurir.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnmkurir.Location = new System.Drawing.Point(377, 50);
+            this.txtnmkurir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtnmkurir.Name = "txtnmkurir";
             this.txtnmkurir.Size = new System.Drawing.Size(366, 30);
             this.txtnmkurir.TabIndex = 4;
@@ -190,8 +190,8 @@
             // 
             this.txtalmtkurir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtalmtkurir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtalmtkurir.Location = new System.Drawing.Point(377, 95);
-            this.txtalmtkurir.Margin = new System.Windows.Forms.Padding(4);
+            this.txtalmtkurir.Location = new System.Drawing.Point(377, 96);
+            this.txtalmtkurir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtalmtkurir.Name = "txtalmtkurir";
             this.txtalmtkurir.Size = new System.Drawing.Size(366, 30);
             this.txtalmtkurir.TabIndex = 5;
@@ -200,8 +200,8 @@
             // 
             this.txtnokurir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtnokurir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnokurir.Location = new System.Drawing.Point(377, 141);
-            this.txtnokurir.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnokurir.Location = new System.Drawing.Point(377, 142);
+            this.txtnokurir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtnokurir.Name = "txtnokurir";
             this.txtnokurir.Size = new System.Drawing.Size(366, 30);
             this.txtnokurir.TabIndex = 6;
@@ -211,7 +211,7 @@
             this.nokurir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.nokurir.AutoSize = true;
             this.nokurir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nokurir.Location = new System.Drawing.Point(4, 144);
+            this.nokurir.Location = new System.Drawing.Point(4, 145);
             this.nokurir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nokurir.Name = "nokurir";
             this.nokurir.Size = new System.Drawing.Size(365, 25);
@@ -224,7 +224,7 @@
             this.datakurir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.datakurir.AutoSize = true;
             this.datakurir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datakurir.Location = new System.Drawing.Point(405, 28);
+            this.datakurir.Location = new System.Drawing.Point(404, 29);
             this.datakurir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.datakurir.Name = "datakurir";
             this.datakurir.Size = new System.Drawing.Size(139, 30);

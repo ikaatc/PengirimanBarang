@@ -35,6 +35,14 @@ namespace PengirimanBarang
 
         private void dataGridView()
         {
+            koneksi.Open();
+            string str = "select id_pengirim, nm_pengirim, notlp_pengirim from dbo.Pengirim";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -74,6 +74,7 @@ namespace PengirimanBarang
 
         private void btnclear_Click(object sender, EventArgs e)
         {
+            refreshform();
         }
 
         private void btnsave_Click(object sender, EventArgs e)

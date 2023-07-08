@@ -41,5 +41,21 @@ namespace PengirimanBarang
         {
             refreshform();
         }
+
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select id_penerima, nm_penerima, alamat_penerima, notlp_penerima from dbo.Penerima";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

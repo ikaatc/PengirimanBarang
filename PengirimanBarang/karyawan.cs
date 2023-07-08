@@ -25,5 +25,27 @@ namespace PengirimanBarang
             btnsave.Enabled = true;
             btnclear.Enabled = true;
         }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            string idkaryawan = txtkaryawan.Text;
+            string nmkaryawan = txtnmkaryawan.Text;
+            string nokaryawan = txtnokaryawan.Text;
+
+            if (idkaryawan == "")
+            {
+                MessageBox.Show("Masukkan ID Karyawan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            if (nmkaryawan == "")
+            {
+                MessageBox.Show("Masukkan Nama Karyawan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            if (nokaryawan == "")
+            {
+                MessageBox.Show("Masukkan No Telpon Karyawan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

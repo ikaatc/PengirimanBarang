@@ -19,6 +19,8 @@ namespace PengirimanBarang
         public pengirim()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void refreshform()
@@ -42,7 +44,6 @@ namespace PengirimanBarang
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,6 +58,7 @@ namespace PengirimanBarang
 
         private void pengirim_Load(object sender, EventArgs e)
         {
+            refreshform();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

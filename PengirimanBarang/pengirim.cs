@@ -83,6 +83,11 @@ namespace PengirimanBarang
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+            txtpengirim.Enabled = true;
+            txtnmpengirim.Enabled = true;
+            txtnopengirim.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
         }
 
         private void btnback_Click(object sender, EventArgs e)

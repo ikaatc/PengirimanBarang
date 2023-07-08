@@ -216,6 +216,7 @@ namespace PengirimanBarang
             this.btnopen.TabIndex = 17;
             this.btnopen.Text = "Open";
             this.btnopen.UseVisualStyleBackColor = true;
+            this.btnopen.Click += new System.EventHandler(this.btnopen_Click);
             // 
             // karyawan
             // 

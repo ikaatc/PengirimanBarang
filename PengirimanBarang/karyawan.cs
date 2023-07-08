@@ -74,6 +74,18 @@ namespace PengirimanBarang
             {
                 MessageBox.Show("Masukkan No Telpon Karyawan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO karyawan (id_karyawan, nm_karyawan, notlp_karyawan) VALUES (@id_karyawan, @nm_karyawan, @notlp_karyawan)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_karyawan", idkaryawan));
+                cmd.Parameters.Add(new SqlParameter("@nm_karyawan", nmkaryawan));
+                cmd.Parameters.Add(new SqlParameter("@notlp_karyawan", nokaryawan));
+                cmd.ExecuteNonQuery();
+            }
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -84,6 +96,12 @@ namespace PengirimanBarang
         private void karyawan_Load(object sender, EventArgs e)
         {
             refreshform();
+        }
+
+        private void btnopen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnopen.Enabled = false;
         }
     }
 }

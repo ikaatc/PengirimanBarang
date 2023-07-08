@@ -20,6 +20,17 @@ namespace PengirimanBarang
             InitializeComponent();
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select id_karyawan, nm_karyawan, notlp_karyawan from dbo.Karyawan";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
         private void refreshform()
         {
             txtkaryawan.Text = "";

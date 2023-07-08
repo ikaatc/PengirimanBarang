@@ -17,6 +17,18 @@ namespace PengirimanBarang
             InitializeComponent();
         }
 
+        private void refreshform()
+        {
+            txtkaryawan.Text = "";
+            txtkaryawan.Enabled = false;
+            txtnmkaryawan.Text = "";
+            txtnmkaryawan.Enabled = false;
+            txtnokaryawan.Text = "";
+            txtnokaryawan.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+        }
+
         private void btnadd_Click(object sender, EventArgs e)
         {
             txtkaryawan.Enabled = true;

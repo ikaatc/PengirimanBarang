@@ -59,5 +59,10 @@ namespace PengirimanBarang
                 MessageBox.Show("Masukkan No Telpon Karyawan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }

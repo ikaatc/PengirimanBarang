@@ -49,7 +49,7 @@ namespace PengirimanBarang
         private void datakaryawan_Click(object sender, EventArgs e)
         {
             karyawan kar = new karyawan();
-            Show();
+            kar.Show();
             this.Hide();
         }
 

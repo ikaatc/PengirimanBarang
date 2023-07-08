@@ -20,6 +20,7 @@ namespace PengirimanBarang
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void refreshform()
@@ -38,6 +39,7 @@ namespace PengirimanBarang
 
         private void penerima_Load(object sender, EventArgs e)
         {
+            refreshform();
         }
     }
 }

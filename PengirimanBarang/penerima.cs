@@ -64,5 +64,15 @@ namespace PengirimanBarang
             hu.Show();
             this.Hide();
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtpenerima.Enabled = true;
+            txtnmpenerima.Enabled = true;
+            txtalmtpenerima.Enabled = true;
+            txtnopenerima.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+        }
     }
 }

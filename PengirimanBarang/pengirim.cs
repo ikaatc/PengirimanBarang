@@ -95,6 +95,17 @@ namespace PengirimanBarang
             {
                 MessageBox.Show("Masukkan No Telepon Pengirim", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO pengirim (id_pengirim, nm_pengirim, notlp_pengirim) VALUES (@id_pengirim, @nm_pengirim, @notlp_pengirim)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_pengirim", idpengirim));
+                cmd.Parameters.Add(new SqlParameter("@nm_pengirim", nmpengirim));
+                cmd.Parameters.Add(new SqlParameter("@notlp_pengirim", nopengirim));
+                cmd.ExecuteNonQuery();
+            }
         }
 
         private void btnadd_Click(object sender, EventArgs e)

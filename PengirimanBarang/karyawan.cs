@@ -85,6 +85,8 @@ namespace PengirimanBarang
                 cmd.Parameters.Add(new SqlParameter("@nm_karyawan", nmkaryawan));
                 cmd.Parameters.Add(new SqlParameter("@notlp_karyawan", nokaryawan));
                 cmd.ExecuteNonQuery();
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

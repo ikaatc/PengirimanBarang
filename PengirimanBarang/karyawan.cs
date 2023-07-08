@@ -87,6 +87,8 @@ namespace PengirimanBarang
                 cmd.ExecuteNonQuery();
                 koneksi.Close();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
             }
         }
 

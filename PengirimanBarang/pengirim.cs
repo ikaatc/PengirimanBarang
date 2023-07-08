@@ -79,6 +79,22 @@ namespace PengirimanBarang
 
         private void btnsave_Click(object sender, EventArgs e)
         {
+            string idpengirim = txtpengirim.Text;
+            string nmpengirim = txtnmpengirim.Text;
+            string nopengirim = txtnopengirim.Text;
+
+            if (idpengirim == "")
+            {
+                MessageBox.Show("Masukkan ID Pengirim", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (nmpengirim == "")
+            {
+                MessageBox.Show("Masukka Nama Pengirim", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (nopengirim == "")
+            {
+                MessageBox.Show("Masukkan No Telepon Pengirim", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnadd_Click(object sender, EventArgs e)

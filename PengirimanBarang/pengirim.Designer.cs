@@ -42,6 +42,7 @@ namespace PengirimanBarang
             this.btnclear = new System.Windows.Forms.Button();
             this.btnback = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnopen = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -159,6 +160,7 @@ namespace PengirimanBarang
             this.btnadd.TabIndex = 5;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnsave
             // 
@@ -170,6 +172,7 @@ namespace PengirimanBarang
             this.btnsave.TabIndex = 6;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // btnclear
             // 
@@ -181,6 +184,7 @@ namespace PengirimanBarang
             this.btnclear.TabIndex = 7;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // btnback
             // 
@@ -192,6 +196,7 @@ namespace PengirimanBarang
             this.btnback.TabIndex = 8;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // dataGridView1
             // 
@@ -203,6 +208,19 @@ namespace PengirimanBarang
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(743, 219);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnopen
+            // 
+            this.btnopen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnopen.Location = new System.Drawing.Point(908, 100);
+            this.btnopen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnopen.Name = "btnopen";
+            this.btnopen.Size = new System.Drawing.Size(112, 41);
+            this.btnopen.TabIndex = 10;
+            this.btnopen.Text = "Open";
+            this.btnopen.UseVisualStyleBackColor = true;
+            this.btnopen.Click += new System.EventHandler(this.btnopen_Click);
             // 
             // pengirim
             // 
@@ -210,6 +228,7 @@ namespace PengirimanBarang
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.Controls.Add(this.btnopen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnclear);
@@ -222,6 +241,7 @@ namespace PengirimanBarang
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "pengirim";
             this.Text = "pengirim";
+            this.Load += new System.EventHandler(this.pengirim_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -245,5 +265,6 @@ namespace PengirimanBarang
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnopen;
     }
 }

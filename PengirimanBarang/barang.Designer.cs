@@ -35,17 +35,17 @@ namespace PengirimanBarang
             this.btnsave = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtidpengirim = new System.Windows.Forms.ComboBox();
             this.jnsbarang = new System.Windows.Forms.Label();
             this.idpengirim = new System.Windows.Forms.Label();
             this.nmbarang = new System.Windows.Forms.Label();
             this.txtnmbarang = new System.Windows.Forms.TextBox();
-            this.txtjnsbarang = new System.Windows.Forms.TextBox();
             this.ktgrbarang = new System.Windows.Forms.Label();
-            this.databarang = new System.Windows.Forms.Label();
+            this.txtjnsbarang = new System.Windows.Forms.TextBox();
             this.txtktgrbarang = new System.Windows.Forms.ComboBox();
-            this.txtidpengirim = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtidkaryawan = new System.Windows.Forms.ComboBox();
+            this.databarang = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -133,6 +133,28 @@ namespace PengirimanBarang
             this.tableLayoutPanel1.Size = new System.Drawing.Size(747, 226);
             this.tableLayoutPanel1.TabIndex = 32;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 191);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(365, 25);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "ID Karyawan";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtidpengirim
+            // 
+            this.txtidpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtidpengirim.FormattingEnabled = true;
+            this.txtidpengirim.Location = new System.Drawing.Point(376, 9);
+            this.txtidpengirim.Name = "txtidpengirim";
+            this.txtidpengirim.Size = new System.Drawing.Size(368, 33);
+            this.txtidpengirim.TabIndex = 39;
+            // 
             // jnsbarang
             // 
             this.jnsbarang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -182,16 +204,6 @@ namespace PengirimanBarang
             this.txtnmbarang.Size = new System.Drawing.Size(366, 30);
             this.txtnmbarang.TabIndex = 4;
             // 
-            // txtjnsbarang
-            // 
-            this.txtjnsbarang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtjnsbarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtjnsbarang.Location = new System.Drawing.Point(377, 96);
-            this.txtjnsbarang.Margin = new System.Windows.Forms.Padding(4);
-            this.txtjnsbarang.Name = "txtjnsbarang";
-            this.txtjnsbarang.Size = new System.Drawing.Size(366, 30);
-            this.txtjnsbarang.TabIndex = 6;
-            // 
             // ktgrbarang
             // 
             this.ktgrbarang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -205,18 +217,15 @@ namespace PengirimanBarang
             this.ktgrbarang.Text = "Kategori Barang";
             this.ktgrbarang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // databarang
+            // txtjnsbarang
             // 
-            this.databarang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.databarang.AutoSize = true;
-            this.databarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.databarang.Location = new System.Drawing.Point(405, 28);
-            this.databarang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.databarang.Name = "databarang";
-            this.databarang.Size = new System.Drawing.Size(167, 30);
-            this.databarang.TabIndex = 31;
-            this.databarang.Text = "Data Barang";
-            this.databarang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.txtjnsbarang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtjnsbarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtjnsbarang.Location = new System.Drawing.Point(377, 96);
+            this.txtjnsbarang.Margin = new System.Windows.Forms.Padding(4);
+            this.txtjnsbarang.Name = "txtjnsbarang";
+            this.txtjnsbarang.Size = new System.Drawing.Size(366, 30);
+            this.txtjnsbarang.TabIndex = 6;
             // 
             // txtktgrbarang
             // 
@@ -230,32 +239,10 @@ namespace PengirimanBarang
             "Kesehatan dan Kecantikan",
             "Olahraga dan Rekreasi",
             "Perawatan Hewan"});
-            this.txtktgrbarang.Location = new System.Drawing.Point(376, 142);
+            this.txtktgrbarang.Location = new System.Drawing.Point(376, 143);
             this.txtktgrbarang.Name = "txtktgrbarang";
             this.txtktgrbarang.Size = new System.Drawing.Size(368, 33);
             this.txtktgrbarang.TabIndex = 38;
-            // 
-            // txtidpengirim
-            // 
-            this.txtidpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtidpengirim.FormattingEnabled = true;
-            this.txtidpengirim.Location = new System.Drawing.Point(376, 6);
-            this.txtidpengirim.Name = "txtidpengirim";
-            this.txtidpengirim.Size = new System.Drawing.Size(368, 33);
-            this.txtidpengirim.TabIndex = 39;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 191);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(365, 25);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "ID Karyawan";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtidkaryawan
             // 
@@ -269,10 +256,23 @@ namespace PengirimanBarang
             "Kesehatan dan Kecantikan",
             "Olahraga dan Rekreasi",
             "Perawatan Hewan"});
-            this.txtidkaryawan.Location = new System.Drawing.Point(376, 187);
+            this.txtidkaryawan.Location = new System.Drawing.Point(376, 189);
             this.txtidkaryawan.Name = "txtidkaryawan";
             this.txtidkaryawan.Size = new System.Drawing.Size(368, 33);
             this.txtidkaryawan.TabIndex = 41;
+            // 
+            // databarang
+            // 
+            this.databarang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.databarang.AutoSize = true;
+            this.databarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.databarang.Location = new System.Drawing.Point(405, 28);
+            this.databarang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.databarang.Name = "databarang";
+            this.databarang.Size = new System.Drawing.Size(167, 30);
+            this.databarang.TabIndex = 31;
+            this.databarang.Text = "Data Barang";
+            this.databarang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // barang
             // 

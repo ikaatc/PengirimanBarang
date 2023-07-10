@@ -335,6 +335,7 @@ namespace PengirimanBarang
             this.cbxidpengirim.Name = "cbxidpengirim";
             this.cbxidpengirim.Size = new System.Drawing.Size(348, 33);
             this.cbxidpengirim.TabIndex = 30;
+            this.cbxidpengirim.SelectedIndexChanged += new System.EventHandler(this.cbxidpengirim_SelectedIndexChanged);
             // 
             // txtnoresi
             // 

@@ -140,5 +140,32 @@ namespace PengirimanBarang
         {
 
         }
+
+        private void cbxidpengirim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            koneksi.Open();
+            string nm = "";
+            string jns = "";
+            string ktgr = "";
+            string strs = "select nm, jns, ktgr from dbo.barang where id_pengirim = @idp";
+            SqlCommand cm = new SqlCommand(strs, koneksi);
+            cm.CommandType = CommandType.Text;
+            cm.Parameters.Add(new SqlParameter("@idp", cbxidpengirim.SelectedValue)); // Mengambil nilai terpilih dari ComboBox
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            koneksi.Close();
+
+            if (dt.Rows.Count > 0)
+            {
+                nm = dt.Rows[0]["nm"].ToString();
+                jns = dt.Rows[0]["jns"].ToString();
+                ktgr = dt.Rows[0]["ktgr"].ToString();
+            }
+
+            txtnama.Text = nm;
+            txtjns.Text = jns;
+            txtktgr.Text = ktgr;
+        }
     }
 }

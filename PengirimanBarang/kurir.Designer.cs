@@ -43,6 +43,7 @@
             this.txtnokurir = new System.Windows.Forms.TextBox();
             this.nokurir = new System.Windows.Forms.Label();
             this.datakurir = new System.Windows.Forms.Label();
+            this.btnopen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -235,11 +236,24 @@
             this.datakurir.Text = "Data Kurir";
             this.datakurir.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnopen
+            // 
+            this.btnopen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnopen.Location = new System.Drawing.Point(919, 102);
+            this.btnopen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnopen.Name = "btnopen";
+            this.btnopen.Size = new System.Drawing.Size(112, 41);
+            this.btnopen.TabIndex = 31;
+            this.btnopen.Text = "Open";
+            this.btnopen.UseVisualStyleBackColor = true;
+            this.btnopen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
             // kurir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.Controls.Add(this.btnopen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnclear);
@@ -277,5 +291,6 @@
         private System.Windows.Forms.TextBox txtnokurir;
         private System.Windows.Forms.Label nokurir;
         private System.Windows.Forms.Label datakurir;
+        private System.Windows.Forms.Button btnopen;
     }
 }

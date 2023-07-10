@@ -53,10 +53,11 @@ namespace PengirimanBarang
         private void formresi_load()
         {
             koneksi.Open();
-            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("select m.no_resi, p.id_pengirim, k.nm_barang, m.berat_brg," +
-                "m.harga_pengiriman, m.tgl_pengiriman from dbo.resi m" +
-                "join dbo.pengirim p on m.id_pengirim = p.id_pengirim" +
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("select m.no_resi, p.id_pengirim, k.nm_barang, m.berat_brg, " +
+                "m.harga_pengiriman, m.tgl_pengiriman from dbo.resi m " +
+                "join dbo.pengirim p on m.id_pengirim = p.id_pengirim " +
                 "join dbo.barang k on m.nm_barang = k.nm_barang", koneksi));
+
             DataSet ds = new DataSet();
             dataAdapter1.Fill(ds);
 
@@ -171,32 +172,24 @@ namespace PengirimanBarang
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+            txtnoresi.Text = "";
+            txtbrg.Text = "";
+            txtharga.Text = "";
+            datetime.Value = DateTime.Now;
             txtnoresi.Enabled = true;
             cbxidpengirim.Enabled = true;
+            cbxnama.Enabled = true;
             txtbrg.Enabled = true;
             txtharga.Enabled = true;
             datetime.Enabled = true;
             idpengirimtxt();
             btnclear.Enabled = true;
             btnsave.Enabled = true;
-
         }
 
         private void cbxidpengirim_SelectedIndexChanged(object sender, EventArgs e)
         {
-            koneksi.Open();
-            string nm = "";
-            string strs = "select nm_barang from dbo.barang where id_pengirim = @idp";
-            SqlCommand cm = new SqlCommand(strs, koneksi);
-            cm.CommandType = CommandType.Text;
-            cm.Parameters.Add(new SqlParameter("@idp", cbxidpengirim.Text));
-            SqlDataReader dr = cm.ExecuteReader();
-            while (dr.Read())
-            {
-                nm = dr["nm_barang"].ToString();
-            }
-            dr.Close();
-            koneksi.Close();
+            
         }
 
         private void btnclear_Click(object sender, EventArgs e)

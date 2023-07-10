@@ -31,6 +31,21 @@ namespace PengirimanBarang
             koneksi.Close();
         }
 
+        private void refreshform()
+        {
+            txtkurir.Text = "";
+            txtkurir.Enabled = false;
+            txtnmkurir.Text = "";
+            txtnmkurir.Enabled = false;
+            txtalmtkurir.Text = "";
+            txtalmtkurir.Enabled = false;
+            txtnokurir.Text = "";
+            txtnokurir.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+        }
+
+
         private void btnadd_Click(object sender, EventArgs e)
         {
             txtkurir.Enabled = true;

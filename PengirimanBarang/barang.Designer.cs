@@ -46,6 +46,7 @@ namespace PengirimanBarang
             this.txtktgrbarang = new System.Windows.Forms.ComboBox();
             this.txtidkaryawan = new System.Windows.Forms.ComboBox();
             this.databarang = new System.Windows.Forms.Label();
+            this.btnopen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -150,7 +151,7 @@ namespace PengirimanBarang
             // 
             this.txtidpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtidpengirim.FormattingEnabled = true;
-            this.txtidpengirim.Location = new System.Drawing.Point(376, 9);
+            this.txtidpengirim.Location = new System.Drawing.Point(376, 6);
             this.txtidpengirim.Name = "txtidpengirim";
             this.txtidpengirim.Size = new System.Drawing.Size(368, 33);
             this.txtidpengirim.TabIndex = 39;
@@ -239,7 +240,7 @@ namespace PengirimanBarang
             "Kesehatan dan Kecantikan",
             "Olahraga dan Rekreasi",
             "Perawatan Hewan"});
-            this.txtktgrbarang.Location = new System.Drawing.Point(376, 143);
+            this.txtktgrbarang.Location = new System.Drawing.Point(376, 140);
             this.txtktgrbarang.Name = "txtktgrbarang";
             this.txtktgrbarang.Size = new System.Drawing.Size(368, 33);
             this.txtktgrbarang.TabIndex = 38;
@@ -256,7 +257,7 @@ namespace PengirimanBarang
             "Kesehatan dan Kecantikan",
             "Olahraga dan Rekreasi",
             "Perawatan Hewan"});
-            this.txtidkaryawan.Location = new System.Drawing.Point(376, 189);
+            this.txtidkaryawan.Location = new System.Drawing.Point(376, 187);
             this.txtidkaryawan.Name = "txtidkaryawan";
             this.txtidkaryawan.Size = new System.Drawing.Size(368, 33);
             this.txtidkaryawan.TabIndex = 41;
@@ -274,11 +275,23 @@ namespace PengirimanBarang
             this.databarang.Text = "Data Barang";
             this.databarang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnopen
+            // 
+            this.btnopen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnopen.Location = new System.Drawing.Point(919, 102);
+            this.btnopen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnopen.Name = "btnopen";
+            this.btnopen.Size = new System.Drawing.Size(112, 41);
+            this.btnopen.TabIndex = 38;
+            this.btnopen.Text = "Open";
+            this.btnopen.UseVisualStyleBackColor = true;
+            // 
             // barang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.Controls.Add(this.btnopen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnclear);
@@ -291,6 +304,7 @@ namespace PengirimanBarang
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "barang";
             this.Text = "barang";
+            this.Load += new System.EventHandler(this.barang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -318,5 +332,6 @@ namespace PengirimanBarang
         private System.Windows.Forms.ComboBox txtktgrbarang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox txtidkaryawan;
+        private System.Windows.Forms.Button btnopen;
     }
 }

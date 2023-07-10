@@ -21,5 +21,10 @@ namespace PengirimanBarang
         {
 
         }
+
+        private void barang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

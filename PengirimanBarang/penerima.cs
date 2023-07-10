@@ -85,5 +85,12 @@ namespace PengirimanBarang
         {
             refreshform();
         }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            string idpenerima = txtpenerima.Text;
+            string nmpenerima = txtnmpenerima.Text;
+            string nopenerima = txtnopenerima.Text;
+        }
     }
 }

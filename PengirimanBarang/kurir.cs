@@ -33,7 +33,12 @@ namespace PengirimanBarang
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-
+            txtkurir.Enabled = true;
+            txtnmkurir.Enabled = true;
+            txtalmtkurir.Enabled = true;
+            txtnokurir.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
         }
     }
 }

@@ -32,6 +32,25 @@ namespace PengirimanBarang
             koneksi.Close();
         }
 
+        private void refreshform()
+        {
+            txtnoresi.Text = "";
+            txtnoresi.Enabled = false;
+            txtbrg.Text = "";
+            txtbrg.Enabled = false;
+            txtharga.Text = "";
+            txtharga.Enabled = false;
+            datetime.Enabled = false;
+            cbxidpengirim.Text = "";
+            cbxidpengirim.Enabled = false;
+            cbxidpengirim.SelectedIndex = -1;
+            txtnama.Visible = false;
+            txtjns.Visible = false;
+            txtktgr.Visible = false;
+            btnsave.Enabled = false;
+            btnclear.Visible = false;
+        }
+
         private void resi_Load(object sender, EventArgs e)
         {
 

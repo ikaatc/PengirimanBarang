@@ -49,6 +49,8 @@ namespace PengirimanBarang
             this.btnsave = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtktgr = new System.Windows.Forms.Label();
+            this.txtjns = new System.Windows.Forms.Label();
             this.txtnama = new System.Windows.Forms.Label();
             this.txtharga = new System.Windows.Forms.TextBox();
             this.txtbrg = new System.Windows.Forms.TextBox();
@@ -117,7 +119,7 @@ namespace PengirimanBarang
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1067, 38);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1067, 33);
             this.bindingNavigator1.TabIndex = 25;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -127,7 +129,7 @@ namespace PengirimanBarang
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
@@ -247,6 +249,8 @@ namespace PengirimanBarang
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.txtktgr, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtjns, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtnama, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtharga, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtbrg, 1, 5);
@@ -274,6 +278,28 @@ namespace PengirimanBarang
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(708, 381);
             this.tableLayoutPanel1.TabIndex = 29;
+            // 
+            // txtktgr
+            // 
+            this.txtktgr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtktgr.AutoSize = true;
+            this.txtktgr.Location = new System.Drawing.Point(357, 199);
+            this.txtktgr.Name = "txtktgr";
+            this.txtktgr.Size = new System.Drawing.Size(348, 25);
+            this.txtktgr.TabIndex = 47;
+            this.txtktgr.Text = "Kategori Barang";
+            this.txtktgr.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // txtjns
+            // 
+            this.txtjns.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtjns.AutoSize = true;
+            this.txtjns.Location = new System.Drawing.Point(357, 150);
+            this.txtjns.Name = "txtjns";
+            this.txtjns.Size = new System.Drawing.Size(348, 25);
+            this.txtjns.TabIndex = 46;
+            this.txtjns.Text = "Jenis Barang";
+            this.txtjns.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtnama
             // 
@@ -481,6 +507,8 @@ namespace PengirimanBarang
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label txtktgr;
+        private System.Windows.Forms.Label txtjns;
         private System.Windows.Forms.Label txtnama;
         private System.Windows.Forms.TextBox txtharga;
         private System.Windows.Forms.TextBox txtbrg;

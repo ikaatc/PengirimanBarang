@@ -46,6 +46,33 @@ namespace PengirimanBarang
             datetime.Enabled = false;
             btnsave.Enabled = false;
             btnclear.Enabled = false;
+            formresi_load();
+        }
+
+        private void formresi_load()
+        {
+            koneksi.Open();
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("select m.no_resi, p.id_pengirim, k.nm_barang, m.berat_brg," +
+                "m.harga_pengiriman, m.tgl_pengiriman from dbo.resi m" +
+                "join dbo.pengirim p on m.id_pengirim = p.id_pengirim" +
+                "join dbo.barang k on m.nm_barang = k.nm_barang", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
+
+            this.customersBindingSource.DataSource = ds.Tables[0];
+            this.txtnoresi.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "no_resi", true));
+            this.cbxidpengirim.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "id_pengirim", true));
+            this.cbxnama.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "nm_barang", true));
+            this.txtbrg.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "berat_brg", true));
+            this.txtharga.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "harga_pengiriman", true));
+            this.datetime.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "tgl_pengiriman", true));
+            koneksi.Close();
         }
 
         private void idpengirimtxt()

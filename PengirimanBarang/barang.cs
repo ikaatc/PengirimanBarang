@@ -36,6 +36,22 @@ namespace PengirimanBarang
             koneksi.Close();
         }
 
+        private void refreshform()
+        {
+            txtidpengirim.Text = "";
+            txtidpengirim.Enabled = false;
+            txtidkaryawan.Text = "";
+            txtidkaryawan.Enabled = false;
+            txtnmbarang.Text = "";
+            txtnmbarang.Enabled = false;
+            txtjnsbarang.Text = "";
+            txtjnsbarang.Enabled = false;
+            txtktgrbarang.Text = "";
+            txtktgrbarang.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+        }
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 

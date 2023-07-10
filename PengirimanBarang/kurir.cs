@@ -94,6 +94,10 @@ namespace PengirimanBarang
                 cmd.Parameters.Add(new SqlParameter("@alamat_kurir", almtkurir));
                 cmd.Parameters.Add(new SqlParameter("@notlp_kurir", nokurir));
                 cmd.ExecuteNonQuery();
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
             }
         }
     }

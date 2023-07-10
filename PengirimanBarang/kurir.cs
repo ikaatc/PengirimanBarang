@@ -67,6 +67,19 @@ namespace PengirimanBarang
             {
                 MessageBox.Show("Masukkan No Telpon Kurir", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO kurir (id_kurir, nm_kurir, alamat_kurir, notlp_kurir) VALUES (@id_kurir, @nm_kurir, @alamat_kurir, @notlp_kurir)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_kurir", idkurir));
+                cmd.Parameters.Add(new SqlParameter("@nm_kurir", nmkurir));
+                cmd.Parameters.Add(new SqlParameter("@alamat_kurir", almtkurir));
+                cmd.Parameters.Add(new SqlParameter("@notlp_kurir", nokurir));
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }

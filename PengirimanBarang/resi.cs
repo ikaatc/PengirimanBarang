@@ -22,6 +22,16 @@ namespace PengirimanBarang
             koneksi = new SqlConnection(stringConnection);
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select no_resi, id_pengirim, nm_barang, jns_barang, kategori_barang, tgl_pengiriman, berat_brg, harga_pengiriman from dbo.resi";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            koneksi.Close();
+        }
+
         private void resi_Load(object sender, EventArgs e)
         {
 
@@ -80,6 +90,13 @@ namespace PengirimanBarang
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Form1 hu = new Form1();
+            hu.Show();
+            this.Hide();
         }
     }
 }

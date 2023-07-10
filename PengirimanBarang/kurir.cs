@@ -111,5 +111,12 @@ namespace PengirimanBarang
             dataGridView();
             btnopen.Enabled = false;
         }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Form1 hu = new Form1();
+            hu.Show();
+            this.Hide();
+        }
     }
 }

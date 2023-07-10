@@ -120,6 +120,11 @@ namespace PengirimanBarang
             refreshform();
         }
 
+        private void txtidpengirim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void dataGridView()
         {
             koneksi.Open();

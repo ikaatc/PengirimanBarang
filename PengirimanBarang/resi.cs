@@ -16,6 +16,8 @@ namespace PengirimanBarang
     {
         private string stringConnection = "data source=DESKTOP-9NQGA7N\\IKATC;" + "database=PengirimanBarang; User ID = sa; Password = 1234";
         private SqlConnection koneksi;
+
+        BindingSource customersBindingSource = new BindingSource();
         public resi()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace PengirimanBarang
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select no_resi, id_pengirim, nm_barang, jns_barang, kategori_barang, tgl_pengiriman, berat_brg, harga_pengiriman from dbo.resi";
+            string str = "select no_resi, id_pengirim, nm_barang, tgl_pengiriman, berat_brg, harga_pengiriman from dbo.resi";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -35,38 +37,22 @@ namespace PengirimanBarang
 
         private void refreshform()
         {
-            txtnoresi.Text = "";
-            txtnoresi.Enabled = false;
-            txtbrg.Text = "";
-            txtbrg.Enabled = false;
-            txtharga.Text = "";
-            txtharga.Enabled = false;
-            datetime.Enabled = false;
-            cbxidpengirim.Text = "";
-            cbxidpengirim.Enabled = false;
-            cbxidpengirim.SelectedIndex = -1;
-            txtnama.Visible = false;
-            txtjns.Visible = false;
-            txtktgr.Visible = false;
-            btnsave.Enabled = false;
-            btnclear.Visible = false;
+            
         }
 
         private void idpengirimtxt()
         {
             koneksi.Open();
-            string str = "SELECT id_pengirim FROM dbo.pengirim WHERE " +
-             "NOT EXISTS (SELECT id_barang FROM dbo.barang WHERE " +
-             "barang.nm_barang = pengirim.nm AND barang.jns_barang = pengirim.jns AND barang.kategori_barang = pengirim.kategori)";
+            string str = "SELECT id_pengirim FROM dbo.pengirim";
 
             SqlCommand cmd = new SqlCommand(str, koneksi);
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
+            cmd.ExecuteReader();
             koneksi.Close();
 
             cbxidpengirim.DisplayMember = "id_pengirim";
-            cbxidpengirim.ValueMember = "id_pengirim";
             cbxidpengirim.DataSource = ds.Tables[0];
         }
 
@@ -139,6 +125,14 @@ namespace PengirimanBarang
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+            txtnoresi.Enabled = true;
+            cbxidpengirim.Enabled = true;
+            txtbrg.Enabled = true;
+            txtharga.Enabled = true;
+            datetime.Enabled = true;
+            idpengirimtxt();
+            btnclear.Enabled = true;
+            btnsave.Enabled = true;
 
         }
 
@@ -146,27 +140,17 @@ namespace PengirimanBarang
         {
             koneksi.Open();
             string nm = "";
-            string jns = "";
-            string ktgr = "";
-            string strs = "select nm, jns, ktgr from dbo.barang where id_pengirim = @idp";
+            string strs = "select nm_barang from dbo.barang where id_pengirim = @idp";
             SqlCommand cm = new SqlCommand(strs, koneksi);
             cm.CommandType = CommandType.Text;
-            cm.Parameters.Add(new SqlParameter("@idp", cbxidpengirim.SelectedValue)); // Mengambil nilai terpilih dari ComboBox
-            SqlDataAdapter da = new SqlDataAdapter(cm);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            koneksi.Close();
-
-            if (dt.Rows.Count > 0)
+            cm.Parameters.Add(new SqlParameter("@idp", cbxidpengirim.Text));
+            SqlDataReader dr = cm.ExecuteReader();
+            while (dr.Read())
             {
-                nm = dt.Rows[0]["nm"].ToString();
-                jns = dt.Rows[0]["jns"].ToString();
-                ktgr = dt.Rows[0]["ktgr"].ToString();
+                nm = dr["nm_barang"].ToString();
             }
-
-            txtnama.Text = nm;
-            txtjns.Text = jns;
-            txtktgr.Text = ktgr;
+            dr.Close();
+            koneksi.Close();
         }
 
         private void btnclear_Click(object sender, EventArgs e)

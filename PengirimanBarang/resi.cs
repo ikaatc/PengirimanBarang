@@ -51,6 +51,24 @@ namespace PengirimanBarang
             btnclear.Visible = false;
         }
 
+        private void idpengirimtxt()
+        {
+            koneksi.Open();
+            string str = "SELECT id_pengirim FROM dbo.pengirim WHERE " +
+             "NOT EXISTS (SELECT id_barang FROM dbo.barang WHERE " +
+             "barang.nm_barang = pengirim.nm AND barang.jns_barang = pengirim.jns AND barang.kategori_barang = pengirim.kategori)";
+
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            koneksi.Close();
+
+            cbxidpengirim.DisplayMember = "id_pengirim";
+            cbxidpengirim.ValueMember = "id_pengirim";
+            cbxidpengirim.DataSource = ds.Tables[0];
+        }
+
         private void resi_Load(object sender, EventArgs e)
         {
 
@@ -116,6 +134,11 @@ namespace PengirimanBarang
             Form1 hu = new Form1();
             hu.Show();
             this.Hide();
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

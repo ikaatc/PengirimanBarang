@@ -38,6 +38,33 @@ namespace PengirimanBarang
             btnopen.Enabled = false;
         }
 
+        private void idpengirimtxt()
+        {
+            koneksi.Open();
+            string str = "select id_pengirim from dbo.pengirim";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            koneksi.Close();
+            txtidpengirim.ValueMember = "id_pengirim";
+            txtidpengirim.DataSource = ds.Tables[0];
+        }
+
+        private void idkaryawantxt()
+        {
+            koneksi.Open();
+            string str = "select id_karyawan from dbo.karyawan";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            txtidkaryawan.ValueMember = "id_karyawan";
+            txtidkaryawan.DataSource = ds.Tables[0];
+        }
+
         private void btnadd_Click(object sender, EventArgs e)
         {
             txtidpengirim.Text = "";

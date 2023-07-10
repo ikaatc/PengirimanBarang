@@ -20,6 +20,7 @@ namespace PengirimanBarang
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void dataGridView()
@@ -166,6 +167,11 @@ namespace PengirimanBarang
             txtnama.Text = nm;
             txtjns.Text = jns;
             txtktgr.Text = ktgr;
+        }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform()
         }
     }
 }

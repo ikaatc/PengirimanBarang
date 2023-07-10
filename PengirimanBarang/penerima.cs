@@ -114,6 +114,9 @@ namespace PengirimanBarang
                 cmd.Parameters.Add(new SqlParameter("@nm_penerima", nmpenerima));
                 cmd.Parameters.Add(new SqlParameter("@notlp_penerima", nopenerima));
                 cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

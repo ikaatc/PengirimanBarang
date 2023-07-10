@@ -25,6 +25,17 @@ namespace PengirimanBarang
             koneksi = new SqlConnection(stringConnection);
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select id_pengirim, id_karyawan, nm_barang, jns_barang, kategori_barang from dbo.barang";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 

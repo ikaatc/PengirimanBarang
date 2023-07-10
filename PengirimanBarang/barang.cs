@@ -16,6 +16,9 @@ namespace PengirimanBarang
     {
         private string stringConnection = "data source=DESKTOP-9NQGA7N\\IKATC;" + "database=PengirimanBarang; User ID = sa; Password = 1234";
         private SqlConnection koneksi;
+
+        private string nama, jenis, kategori, idpeng, idkar;
+        BindingSource customersBindingSource = new BindingSource();
         public barang()
         {
             InitializeComponent();

@@ -106,6 +106,7 @@ namespace PengirimanBarang
             this.btnadd.TabIndex = 33;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // tableLayoutPanel1
             // 

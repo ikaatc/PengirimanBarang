@@ -38,6 +38,24 @@ namespace PengirimanBarang
             btnopen.Enabled = false;
         }
 
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtidpengirim.Text = "";
+            txtnmbarang.Text = "";
+            txtjnsbarang.Text = "";
+            txtktgrbarang.Text = "";
+            txtidkaryawan.Text = "";
+            txtidpengirim.Enabled = true;
+            txtnmbarang.Enabled = true;
+            txtjnsbarang.Enabled = true;
+            txtktgrbarang.Enabled = true;
+            txtidkaryawan.Enabled = true;
+            idpengirimtxt();
+            idkaryawantxt();
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+        }
+
         private void dataGridView()
         {
             koneksi.Open();

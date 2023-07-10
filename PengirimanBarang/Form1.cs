@@ -66,5 +66,12 @@ namespace PengirimanBarang
             pen.Show();
             this.Hide();
         }
+
+        private void dataresi_Click(object sender, EventArgs e)
+        {
+            resi re = new resi();
+            re.Show();
+            this.Hide();
+        }
     }
 }

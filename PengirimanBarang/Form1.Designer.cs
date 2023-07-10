@@ -130,6 +130,7 @@ namespace PengirimanBarang
             this.dataresi.Name = "dataresi";
             this.dataresi.Size = new System.Drawing.Size(402, 50);
             this.dataresi.Text = "Data Resi";
+            this.dataresi.Click += new System.EventHandler(this.dataresi_Click);
             // 
             // datapengiriman
             // 
@@ -157,7 +158,7 @@ namespace PengirimanBarang
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.toolStrip1.ResumeLayout(false);

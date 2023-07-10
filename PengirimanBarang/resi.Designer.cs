@@ -65,6 +65,7 @@ namespace PengirimanBarang
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.datetime = new System.Windows.Forms.DateTimePicker();
+            this.btndelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -328,7 +329,7 @@ namespace PengirimanBarang
             // 
             this.cbxidpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxidpengirim.FormattingEnabled = true;
-            this.cbxidpengirim.Location = new System.Drawing.Point(357, 55);
+            this.cbxidpengirim.Location = new System.Drawing.Point(357, 52);
             this.cbxidpengirim.Name = "cbxidpengirim";
             this.cbxidpengirim.Size = new System.Drawing.Size(348, 33);
             this.cbxidpengirim.TabIndex = 30;
@@ -437,11 +438,23 @@ namespace PengirimanBarang
             this.datetime.Size = new System.Drawing.Size(348, 30);
             this.datetime.TabIndex = 39;
             // 
+            // btndelete
+            // 
+            this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndelete.Location = new System.Drawing.Point(905, 134);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(112, 41);
+            this.btndelete.TabIndex = 30;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = true;
+            // 
             // resi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.Controls.Add(this.btndelete);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
@@ -501,5 +514,6 @@ namespace PengirimanBarang
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker datetime;
+        private System.Windows.Forms.Button btndelete;
     }
 }

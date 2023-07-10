@@ -22,6 +22,7 @@ namespace PengirimanBarang
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
+            this.bindingNavigator1.BindingSource = this.customersBindingSource;
             refreshform();
         }
 
@@ -37,7 +38,14 @@ namespace PengirimanBarang
 
         private void refreshform()
         {
-            
+            txtnoresi.Enabled = false;
+            cbxidpengirim.Enabled = false;
+            cbxnama.Enabled = false;
+            txtbrg.Enabled = false;
+            txtharga.Enabled = false;
+            datetime.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
         }
 
         private void idpengirimtxt()

@@ -47,6 +47,7 @@ namespace PengirimanBarang
             btnsave.Enabled = false;
             btnclear.Enabled = false;
             formresi_load();
+            clearBinding();
         }
 
         private void formresi_load()
@@ -73,6 +74,16 @@ namespace PengirimanBarang
             this.datetime.DataBindings.Add(
                 new Binding("Text", this.customersBindingSource, "tgl_pengiriman", true));
             koneksi.Close();
+        }
+
+        private void clearBinding()
+        {
+            this.txtnoresi.DataBindings.Clear();
+            this.cbxidpengirim.DataBindings.Clear();
+            this.cbxnama.DataBindings.Clear();
+            this.txtbrg.DataBindings.Clear();
+            this.txtharga.DataBindings.Clear();
+            this.datetime.DataBindings.Clear();
         }
 
         private void idpengirimtxt()

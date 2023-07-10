@@ -74,5 +74,16 @@ namespace PengirimanBarang
             btnsave.Enabled = true;
             btnclear.Enabled = true;
         }
+
+        private void btnopen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnopen.Enabled = false;
+        }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }

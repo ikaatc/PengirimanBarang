@@ -71,7 +71,7 @@ namespace PengirimanBarang
             this.tableLayoutPanel1.Controls.Add(this.txtnmpengirim, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtnopengirim, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(135, 321);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.53764F));
@@ -125,7 +125,7 @@ namespace PengirimanBarang
             this.txtpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtpengirim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpengirim.Location = new System.Drawing.Point(377, 14);
-            this.txtpengirim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpengirim.Margin = new System.Windows.Forms.Padding(4);
             this.txtpengirim.Name = "txtpengirim";
             this.txtpengirim.Size = new System.Drawing.Size(366, 30);
             this.txtpengirim.TabIndex = 3;
@@ -135,7 +135,7 @@ namespace PengirimanBarang
             this.txtnmpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtnmpengirim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnmpengirim.Location = new System.Drawing.Point(377, 73);
-            this.txtnmpengirim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnmpengirim.Margin = new System.Windows.Forms.Padding(4);
             this.txtnmpengirim.Name = "txtnmpengirim";
             this.txtnmpengirim.Size = new System.Drawing.Size(366, 30);
             this.txtnmpengirim.TabIndex = 4;
@@ -145,7 +145,7 @@ namespace PengirimanBarang
             this.txtnopengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtnopengirim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnopengirim.Location = new System.Drawing.Point(377, 132);
-            this.txtnopengirim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnopengirim.Margin = new System.Windows.Forms.Padding(4);
             this.txtnopengirim.Name = "txtnopengirim";
             this.txtnopengirim.Size = new System.Drawing.Size(366, 30);
             this.txtnopengirim.TabIndex = 5;
@@ -154,7 +154,7 @@ namespace PengirimanBarang
             // 
             this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.Location = new System.Drawing.Point(183, 506);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(4);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(112, 41);
             this.btnadd.TabIndex = 5;
@@ -166,7 +166,7 @@ namespace PengirimanBarang
             // 
             this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsave.Location = new System.Drawing.Point(468, 506);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(112, 41);
             this.btnsave.TabIndex = 6;
@@ -178,7 +178,7 @@ namespace PengirimanBarang
             // 
             this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclear.Location = new System.Drawing.Point(736, 506);
-            this.btnclear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnclear.Margin = new System.Windows.Forms.Padding(4);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(112, 41);
             this.btnclear.TabIndex = 7;
@@ -190,7 +190,7 @@ namespace PengirimanBarang
             // 
             this.btnback.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnback.Location = new System.Drawing.Point(16, 15);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(112, 41);
             this.btnback.TabIndex = 8;
@@ -202,7 +202,7 @@ namespace PengirimanBarang
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(135, 79);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -238,7 +238,7 @@ namespace PengirimanBarang
             this.Controls.Add(this.datapengirim);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pengirim";
             this.Text = "pengirim";
             this.Load += new System.EventHandler(this.pengirim_Load);

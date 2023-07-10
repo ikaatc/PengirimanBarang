@@ -82,6 +82,7 @@
             this.btnclear.TabIndex = 21;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // btnsave
             // 
@@ -244,6 +245,7 @@
             this.btnopen.TabIndex = 24;
             this.btnopen.Text = "Open";
             this.btnopen.UseVisualStyleBackColor = true;
+            this.btnopen.Click += new System.EventHandler(this.btnopen_Click);
             // 
             // penerima
             // 

@@ -22,6 +22,7 @@ namespace PengirimanBarang
         public barang()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

@@ -100,5 +100,10 @@ namespace PengirimanBarang
                 refreshform();
             }
         }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }

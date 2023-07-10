@@ -40,5 +40,33 @@ namespace PengirimanBarang
             btnsave.Enabled = true;
             btnclear.Enabled = true;
         }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            string idkurir = txtkurir.Text;
+            string nmkurir = txtnmkurir.Text;
+            string almtkurir = txtalmtkurir.Text;
+            string nokurir = txtnokurir.Text;
+
+            if (idkurir == "")
+            {
+                MessageBox.Show("Masukkan ID Kurir", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            if (nmkurir == "")
+            {
+                MessageBox.Show("Masukkan Nama Kurir", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            if (almtkurir == "")
+            {
+                MessageBox.Show("Masukkan Alamat Kurir", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning) ;
+            }
+
+            if (nokurir == "")
+            {
+                MessageBox.Show("Masukkan No Telpon Kurir", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

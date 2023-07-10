@@ -329,7 +329,7 @@ namespace PengirimanBarang
             // 
             this.cbxidpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxidpengirim.FormattingEnabled = true;
-            this.cbxidpengirim.Location = new System.Drawing.Point(357, 52);
+            this.cbxidpengirim.Location = new System.Drawing.Point(357, 55);
             this.cbxidpengirim.Name = "cbxidpengirim";
             this.cbxidpengirim.Size = new System.Drawing.Size(348, 33);
             this.cbxidpengirim.TabIndex = 30;

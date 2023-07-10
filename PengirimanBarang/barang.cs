@@ -117,7 +117,28 @@ namespace PengirimanBarang
 
         private void barang_Load(object sender, EventArgs e)
         {
+            koneksi.Open();
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT m.nm_barang, m.jns_barang, " +
+                "m.kategori_barang, p.id_pengirim, k.id_karyawan FROM dbo.barang m " +
+                "JOIN dbo.pengirim p ON m.id_pengirim = p.id_pengirim " +
+                "JOIN dbo.karyawan k ON m.id_karyawan = k.id_karyawan", koneksi));
 
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
+
+            this.customersBindingSource.DataSource = ds.Tables[0];
+            this.txtidpengirim.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "id_pengirim", true));
+            this.txtidkaryawan.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "id_karyawan", true));
+            this.txtnmbarang.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "nm_barang", true));
+            this.txtjnsbarang.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "jns_barang", true));
+            this.txtktgrbarang.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "kategori_barang", true));
+            koneksi.Close();
+            refreshform();
         }
     }
 }

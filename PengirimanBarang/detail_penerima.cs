@@ -83,5 +83,21 @@ namespace PengirimanBarang
             dataGridView();
             btnopen.Enabled = false;
         }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void refreshform()
+        {
+            txtbuktipenerima.Enabled = false;
+            cbxiddetail.Enabled = false;
+            cbxidkurir.Enabled = false;
+            cbxidpenerima.Enabled = false;
+            dtditerima.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+        }
     }
 }

@@ -53,5 +53,18 @@ namespace PengirimanBarang
             hu.Show();
             this.Hide();
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtbuktipenerima.Enabled = true;
+            cbxiddetail.Enabled = true;
+            cbxidkurir.Enabled = true;
+            cbxidpenerima.Enabled = true;
+            dtditerima.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+            idkurirtxt();
+            idpenerimatxt();
+        }
     }
 }

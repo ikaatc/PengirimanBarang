@@ -61,7 +61,7 @@ namespace PengirimanBarang
         private void btnadd_Click(object sender, EventArgs e)
         {
             txtbuktipenerima.Enabled = true;
-            cbxiddetail.Enabled = true;
+            txtidedetail.Enabled = true;
             cbxidkurir.Enabled = true;
             cbxidpenerima.Enabled = true;
             dtditerima.Enabled = true;
@@ -96,7 +96,7 @@ namespace PengirimanBarang
         private void refreshform()
         {
             txtbuktipenerima.Enabled = false;
-            cbxiddetail.Enabled = false;
+            txtidedetail.Enabled = false;
             cbxidkurir.Enabled = false;
             cbxidpenerima.Enabled = false;
             dtditerima.Enabled = false;
@@ -111,7 +111,33 @@ namespace PengirimanBarang
 
         private void btnsave_Click(object sender, EventArgs e)
         {
+            iddetail = txtidedetail.Text;
+            idk = cbxidkurir.Text;
+            idp = cbxidpenerima.Text;
+            bukti = txtbuktipenerima.Text;
+            tgl = dtditerima.Value;
 
+            koneksi.Open();
+            string strs = "select id_kurir from dbo.kurir where id_kurir = @idk, select id_penerima from dbo.penerima where id_penerima = @idp";
+            SqlCommand cm = new SqlCommand(strs, koneksi);
+            cm.CommandType = CommandType.Text;
+            cm.Parameters.Add(new SqlParameter("@idk", idk));
+            cm.Parameters.Add(new SqlParameter("@idp", idp));
+
+            string str = "insert into dbo.detail_penerima (id_detail_penerima, id_kurir, id_penerima, bukti_penerima, tgl_penerima)" +
+                "values (@iddetail, @idk, @idp, @bukti, @tgl)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@iddetail", iddetail);
+            cmd.Parameters.AddWithValue("@idk", idk);
+            cmd.Parameters.AddWithValue("@idp", idp);
+            cmd.Parameters.AddWithValue("@bukti", bukti);
+            cmd.Parameters.AddWithValue("@tgl", tgl);
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+            refreshform();
         }
     }
 }

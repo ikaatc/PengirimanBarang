@@ -40,16 +40,14 @@ namespace PengirimanBarang
             this.label8 = new System.Windows.Forms.Label();
             this.txtberat = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbxid = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtno = new System.Windows.Forms.TextBox();
-            this.cbxnama = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btndelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnopen = new System.Windows.Forms.Button();
+            this.cbxid = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -167,35 +165,6 @@ namespace PengirimanBarang
             this.label7.TabIndex = 36;
             this.label7.Text = "Berat Barang";
             // 
-            // cbxid
-            // 
-            this.cbxid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxid.FormattingEnabled = true;
-            this.cbxid.Location = new System.Drawing.Point(357, 57);
-            this.cbxid.Name = "cbxid";
-            this.cbxid.Size = new System.Drawing.Size(348, 28);
-            this.cbxid.TabIndex = 30;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(348, 20);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Nama Barang";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(348, 20);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "ID Pengirim";
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -214,24 +183,13 @@ namespace PengirimanBarang
             this.txtno.Size = new System.Drawing.Size(348, 26);
             this.txtno.TabIndex = 30;
             // 
-            // cbxnama
-            // 
-            this.cbxnama.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxnama.FormattingEnabled = true;
-            this.cbxnama.Location = new System.Drawing.Point(357, 103);
-            this.cbxnama.Name = "cbxnama";
-            this.cbxnama.Size = new System.Drawing.Size(348, 28);
-            this.cbxnama.TabIndex = 31;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.cbxnama, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.cbxid, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtberat, 1, 3);
@@ -287,6 +245,25 @@ namespace PengirimanBarang
             this.btnopen.UseVisualStyleBackColor = true;
             this.btnopen.Click += new System.EventHandler(this.btnopen_Click);
             // 
+            // cbxid
+            // 
+            this.cbxid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxid.FormattingEnabled = true;
+            this.cbxid.Location = new System.Drawing.Point(357, 57);
+            this.cbxid.Name = "cbxid";
+            this.cbxid.Size = new System.Drawing.Size(348, 28);
+            this.cbxid.TabIndex = 30;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(348, 20);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "ID Pengirim";
+            // 
             // resi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -326,15 +303,13 @@ namespace PengirimanBarang
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtberat;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbxid;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtno;
-        private System.Windows.Forms.ComboBox cbxnama;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnopen;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbxid;
     }
 }

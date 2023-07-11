@@ -66,5 +66,18 @@ namespace PengirimanBarang
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
         }
+
+        private void refreshform()
+        {
+            txtidpengiriman.Text = "";
+            txtidpengiriman.Enabled = false;
+            cbxidpengirim.Text = "";
+            cbxidpengirim.Enabled = false;
+            cbxidpenerima.Text = "";
+            cbxidpenerima.Enabled = false;
+            dtpengantaran.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+        }
     }
 }

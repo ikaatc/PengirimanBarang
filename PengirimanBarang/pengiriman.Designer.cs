@@ -35,7 +35,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpengantaran = new System.Windows.Forms.DateTimePicker();
-            this.cbxidpengiriman = new System.Windows.Forms.ComboBox();
             this.cbxidpengirim = new System.Windows.Forms.ComboBox();
             this.cbxidpenerima = new System.Windows.Forms.ComboBox();
             this.btnclear = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.btnback = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnopen = new System.Windows.Forms.Button();
+            this.txtidpengiriman = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -70,9 +70,9 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.dtpengantaran, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.cbxidpengiriman, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.cbxidpengirim, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbxidpenerima, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtidpengiriman, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(181, 300);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -134,16 +134,6 @@
             this.dtpengantaran.Name = "dtpengantaran";
             this.dtpengantaran.Size = new System.Drawing.Size(392, 26);
             this.dtpengantaran.TabIndex = 39;
-            // 
-            // cbxidpengiriman
-            // 
-            this.cbxidpengiriman.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxidpengiriman.FormattingEnabled = true;
-            this.cbxidpengiriman.Location = new System.Drawing.Point(401, 20);
-            this.cbxidpengiriman.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbxidpengiriman.Name = "cbxidpengiriman";
-            this.cbxidpengiriman.Size = new System.Drawing.Size(392, 28);
-            this.cbxidpengiriman.TabIndex = 30;
             // 
             // cbxidpengirim
             // 
@@ -242,6 +232,13 @@
             this.btnopen.Text = "Open";
             this.btnopen.UseVisualStyleBackColor = true;
             // 
+            // txtidpengiriman
+            // 
+            this.txtidpengiriman.Location = new System.Drawing.Point(401, 3);
+            this.txtidpengiriman.Name = "txtidpengiriman";
+            this.txtidpengiriman.Size = new System.Drawing.Size(392, 26);
+            this.txtidpengiriman.TabIndex = 41;
+            // 
             // pengiriman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -278,7 +275,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpengantaran;
-        private System.Windows.Forms.ComboBox cbxidpengiriman;
         private System.Windows.Forms.ComboBox cbxidpengirim;
         private System.Windows.Forms.ComboBox cbxidpenerima;
         private System.Windows.Forms.Button btnclear;
@@ -288,5 +284,6 @@
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnopen;
+        private System.Windows.Forms.TextBox txtidpengiriman;
     }
 }

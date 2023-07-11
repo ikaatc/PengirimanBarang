@@ -22,6 +22,7 @@ namespace PengirimanBarang
         public pengiriman()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
         }
 
         private void pengiriman_Load(object sender, EventArgs e)

@@ -33,5 +33,18 @@ namespace PengirimanBarang
             cbxidkurir.ValueMember = "id_kurir";
             cbxidkurir.DataSource = ds.Tables[0];
         }
+
+        private void idpenerimatxt()
+        {
+            koneksi.Open();
+            string str = "select id_penerima from dbo.penerima";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            koneksi.Close();
+            cbxidpenerima.ValueMember = "id_penerima";
+            cbxidpenerima.DataSource = ds.Tables[0];
+        }
     }
 }

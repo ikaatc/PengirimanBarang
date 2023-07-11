@@ -224,6 +224,16 @@ namespace PengirimanBarang
             berat = txtbrg.Text;
             harga = txtharga.Text;
             tgl = datetime.Value;
+
+            koneksi.Open();
+            string strs = "select id_pengirim from dbo.pengirim where id_pengirim = @idp;" +
+             "select nm_barang from dbo.barang where nm_barang = @nmb";
+            SqlCommand cm = new SqlCommand(strs, koneksi);
+            cm.CommandType = CommandType.Text;
+            cm.Parameters.Add(new SqlParameter("@idp", id));
+            cm.Parameters.Add(new SqlParameter("@nmb", nm));
+            SqlDataReader dr = cm.ExecuteReader();
+            dr.Close();
         }
     }
 }

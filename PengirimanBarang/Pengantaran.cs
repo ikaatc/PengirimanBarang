@@ -18,6 +18,8 @@ namespace PengirimanBarang
         public Pengantaran()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void dataGridView()
@@ -117,6 +119,11 @@ namespace PengirimanBarang
             Form1 hu = new Form1();
             hu.Show();
             this.Hide();
+        }
+
+        private void Pengantaran_Load(object sender, EventArgs e)
+        {
+            refreshform();
         }
     }
 }

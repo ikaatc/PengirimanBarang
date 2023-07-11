@@ -19,6 +19,7 @@ namespace PengirimanBarang
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void idkurirtxt()
@@ -86,7 +87,7 @@ namespace PengirimanBarang
 
         private void btnclear_Click(object sender, EventArgs e)
         {
-
+            refreshform();
         }
 
         private void refreshform()
@@ -98,6 +99,11 @@ namespace PengirimanBarang
             dtditerima.Enabled = false;
             btnsave.Enabled = false;
             btnclear.Enabled = false;
+        }
+
+        private void detail_penerima_Load(object sender, EventArgs e)
+        {
+            refreshform();
         }
     }
 }

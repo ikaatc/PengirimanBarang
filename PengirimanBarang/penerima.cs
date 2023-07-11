@@ -90,6 +90,7 @@ namespace PengirimanBarang
         {
             string idpenerima = txtpenerima.Text;
             string nmpenerima = txtnmpenerima.Text;
+            string almtpenerima = txtalmtpenerima.Text;
             string nopenerima = txtnopenerima.Text;
 
             if (idpenerima == "")
@@ -100,6 +101,10 @@ namespace PengirimanBarang
             {
                 MessageBox.Show("Masukka Nama Penerima", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            if (almtpenerima == "")
+            {
+                MessageBox.Show("Masukka Alamat Penerima", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             if (nopenerima == "")
             {
                 MessageBox.Show("Masukkan No Telepon Penerima", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -107,11 +112,12 @@ namespace PengirimanBarang
             else
             {
                 koneksi.Open();
-                string str = "INSERT INTO penerima(id_penerima, nm_penerima, notlp_penerima) VALUES (@id_penerima, @nm_penerima, @notlp_penerima)";
+                string str = "INSERT INTO penerima(id_penerima, nm_penerima, almt_penerima, notlp_penerima) VALUES (@id_penerima, @nm_penerima, @almt_penerima, @notlp_penerima)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_penerima", idpenerima));
                 cmd.Parameters.Add(new SqlParameter("@nm_penerima", nmpenerima));
+                cmd.Parameters.Add(new SqlParameter("@almt_penerima", almtpenerima));
                 cmd.Parameters.Add(new SqlParameter("@notlp_penerima", nopenerima));
                 cmd.ExecuteNonQuery();
 

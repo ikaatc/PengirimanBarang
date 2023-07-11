@@ -103,6 +103,22 @@ namespace PengirimanBarang
             cbxidpengirim.DataSource = ds.Tables[0];
         }
 
+        private void nmbarangtxt()
+        {
+            koneksi.Open();
+            string str = "SELECT nm_barang FROM dbo.barang";
+
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+
+            cbxnama.DisplayMember = "nm_barang";
+            cbxnama.DataSource = ds.Tables[0];
+        }
+
         private void resi_Load(object sender, EventArgs e)
         {
 
@@ -183,13 +199,14 @@ namespace PengirimanBarang
             txtharga.Enabled = true;
             datetime.Enabled = true;
             idpengirimtxt();
+            nmbarangtxt();
             btnclear.Enabled = true;
             btnsave.Enabled = true;
         }
 
         private void cbxidpengirim_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            nmbarangtxt();
         }
 
         private void btnclear_Click(object sender, EventArgs e)

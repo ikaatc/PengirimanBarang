@@ -59,6 +59,7 @@
             this.btndelete.TabIndex = 54;
             this.btndelete.Text = "Delete";
             this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // tableLayoutPanel1
             // 

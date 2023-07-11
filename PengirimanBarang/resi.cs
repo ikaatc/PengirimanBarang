@@ -19,7 +19,6 @@ namespace PengirimanBarang
 
         private string no, id, nm, berat, harga;
         private DateTime tgl;
-        BindingSource customersBindingSource = new BindingSource();
         public resi()
         {
             InitializeComponent();
@@ -171,28 +170,7 @@ namespace PengirimanBarang
 
         private void btndelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    string noResi = dataGridView1.SelectedRows[0].Cells["no_resi"].Value.ToString();
-
-                    koneksi.Open();
-                    string str = "DELETE FROM dbo.resi WHERE no_resi = @noResi";
-                    SqlCommand cmd = new SqlCommand(str, koneksi);
-                    cmd.Parameters.AddWithValue("@noResi", noResi);
-                    cmd.ExecuteNonQuery();
-                    koneksi.Close();
-
-                    MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dataGridView();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Pilih baris data yang ingin dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -232,18 +210,19 @@ namespace PengirimanBarang
             tgl = datetime.Value;
 
             koneksi.Open();
-            string strs = "select id_pengirim from dbo.pengirim where id_pengirim = @idp";
+            string strs = "select id_pengirim from dbo.pengirim where id_pengirim = @idp AND select id_barang from dbo.barang where nm_barang = @nmb";
             SqlCommand cm = new SqlCommand(strs, koneksi);
             cm.CommandType = CommandType.Text;
             cm.Parameters.Add(new SqlParameter("@idp", id));
+            cm.Parameters.Add(new SqlParameter("@nmb", nm));
 
             string str = "insert into dbo.resi(no_resi, id_pengirim, nm_barang, berat_brg, harga_pengiriman, tgl_pengiriman)" +
-                "values (@no, @idp, @nm, @berat, @harga, @tgl)";
+                "values (@no, @idp, @nmb, @berat, @harga, @tgl)";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@no", no);
             cmd.Parameters.AddWithValue("@idp", id);
-            cmd.Parameters.AddWithValue("@nm", nm);
+            cmd.Parameters.AddWithValue("@nmb", nm);
             cmd.Parameters.AddWithValue("@berat", berat);
             cmd.Parameters.AddWithValue("@harga", harga);
             cmd.Parameters.AddWithValue("@tgl", tgl);

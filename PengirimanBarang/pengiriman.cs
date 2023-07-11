@@ -118,6 +118,43 @@ namespace PengirimanBarang
             refreshform();
         }
 
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Ambil ID pengiriman dari baris yang dipilih
+                string idPengiriman = dataGridView1.SelectedRows[0].Cells["id_pengiriman"].Value.ToString();
+
+                DialogResult result = MessageBox.Show("Anda yakin ingin menghapus data pengiriman dengan ID " + idPengiriman + "?",
+                    "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    
+                        koneksi.Open();
+
+                        // Hapus data pengiriman berdasarkan ID pengiriman
+                        string str = "DELETE FROM dbo.pengiriman WHERE id_pengiriman = @idpengiriman";
+                        SqlCommand cmd = new SqlCommand(str, koneksi);
+                        cmd.Parameters.AddWithValue("@idpengiriman", idPengiriman);
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        // Refresh tampilan DataGridView
+                        dataGridView();
+
+                        
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("Silakan pilih baris data yang ingin dihapus.", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void dataGridView()
         {
             koneksi.Open();

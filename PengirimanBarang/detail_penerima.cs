@@ -15,6 +15,9 @@ namespace PengirimanBarang
     {
         private string stringConnection = "data source=DESKTOP-9NQGA7N\\IKATC;" + "database=PengirimanBarang; User ID = sa; Password = 1234";
         private SqlConnection koneksi;
+
+        private string iddetail, idk, idp, bukti;
+        private DateTime tgl;
         public detail_penerima()
         {
             InitializeComponent();
@@ -104,6 +107,11 @@ namespace PengirimanBarang
         private void detail_penerima_Load(object sender, EventArgs e)
         {
             refreshform();
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

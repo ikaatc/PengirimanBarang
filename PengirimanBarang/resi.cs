@@ -246,6 +246,8 @@ namespace PengirimanBarang
             cmd.Parameters.Add(new SqlParameter("@tgl", tgl));
             cmd.ExecuteNonQuery();
             koneksi.Close();
+
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

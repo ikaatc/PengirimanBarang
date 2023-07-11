@@ -28,6 +28,17 @@ namespace PengirimanBarang
 
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select no_resi, id_pengirim, nm_barang, berat_brg, harga_pengiriman, tgl_pengiriman from dbo.resi";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
         private void btnback_Click(object sender, EventArgs e)
         {
             Form1 hu = new Form1();

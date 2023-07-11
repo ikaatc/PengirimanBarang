@@ -31,6 +31,20 @@ namespace PengirimanBarang
             koneksi.Close();
         }
 
+        private void refreshform()
+        {
+            cbxidpengantaran.Text = "";
+            cbxidpengantaran.Enabled = false;
+            cbxidkaryawan.Text = "";
+            cbxidkaryawan.Enabled = false;
+            cbxidkurir.Text = "";
+            cbxidkurir.Enabled = false;
+            dtpenerimaan.Text = "";
+            dtpenerimaan.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+        }
+
         private void btnadd_Click(object sender, EventArgs e)
         {
             cbxidpengantaran.Enabled = true;

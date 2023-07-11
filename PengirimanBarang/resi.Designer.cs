@@ -94,7 +94,7 @@ namespace PengirimanBarang
             this.datapengirim.Location = new System.Drawing.Point(471, 53);
             this.datapengirim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.datapengirim.Name = "datapengirim";
-            this.datapengirim.Size = new System.Drawing.Size(69, 30);
+            this.datapengirim.Size = new System.Drawing.Size(60, 26);
             this.datapengirim.TabIndex = 24;
             this.datapengirim.Text = "Resi";
             // 
@@ -138,27 +138,27 @@ namespace PengirimanBarang
             // 
             this.cbxidpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxidpengirim.FormattingEnabled = true;
-            this.cbxidpengirim.Location = new System.Drawing.Point(357, 57);
+            this.cbxidpengirim.Location = new System.Drawing.Point(357, 59);
             this.cbxidpengirim.Name = "cbxidpengirim";
-            this.cbxidpengirim.Size = new System.Drawing.Size(348, 33);
+            this.cbxidpengirim.Size = new System.Drawing.Size(348, 28);
             this.cbxidpengirim.TabIndex = 30;
             this.cbxidpengirim.SelectedIndexChanged += new System.EventHandler(this.cbxidpengirim_SelectedIndexChanged);
             // 
             // datetime
             // 
             this.datetime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.datetime.Location = new System.Drawing.Point(357, 248);
+            this.datetime.Location = new System.Drawing.Point(357, 250);
             this.datetime.Name = "datetime";
-            this.datetime.Size = new System.Drawing.Size(348, 30);
+            this.datetime.Size = new System.Drawing.Size(348, 26);
             this.datetime.TabIndex = 39;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 251);
+            this.label3.Location = new System.Drawing.Point(3, 253);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(348, 25);
+            this.label3.Size = new System.Drawing.Size(348, 20);
             this.label3.TabIndex = 38;
             this.label3.Text = "Tanggal Pengiriman";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -167,9 +167,9 @@ namespace PengirimanBarang
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 202);
+            this.label8.Location = new System.Drawing.Point(3, 204);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(348, 25);
+            this.label8.Size = new System.Drawing.Size(348, 20);
             this.label8.TabIndex = 37;
             this.label8.Text = "Harga Pengiriman";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -178,9 +178,9 @@ namespace PengirimanBarang
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 153);
+            this.label7.Location = new System.Drawing.Point(3, 155);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(348, 25);
+            this.label7.Size = new System.Drawing.Size(348, 20);
             this.label7.TabIndex = 36;
             this.label7.Text = "Berat Barang";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -189,9 +189,9 @@ namespace PengirimanBarang
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 105);
+            this.label4.Location = new System.Drawing.Point(3, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(348, 25);
+            this.label4.Size = new System.Drawing.Size(348, 20);
             this.label4.TabIndex = 33;
             this.label4.Text = "Nama Barang";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -200,9 +200,9 @@ namespace PengirimanBarang
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 59);
+            this.label2.Location = new System.Drawing.Point(3, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(348, 25);
+            this.label2.Size = new System.Drawing.Size(348, 20);
             this.label2.TabIndex = 31;
             this.label2.Text = "ID Pengirim";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -211,9 +211,9 @@ namespace PengirimanBarang
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Location = new System.Drawing.Point(3, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 25);
+            this.label1.Size = new System.Drawing.Size(348, 20);
             this.label1.TabIndex = 30;
             this.label1.Text = "Nomor Resi";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -221,25 +221,25 @@ namespace PengirimanBarang
             // txtnoresi
             // 
             this.txtnoresi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtnoresi.Location = new System.Drawing.Point(357, 9);
+            this.txtnoresi.Location = new System.Drawing.Point(357, 11);
             this.txtnoresi.Name = "txtnoresi";
-            this.txtnoresi.Size = new System.Drawing.Size(348, 30);
+            this.txtnoresi.Size = new System.Drawing.Size(348, 26);
             this.txtnoresi.TabIndex = 30;
             // 
             // txtbrg
             // 
             this.txtbrg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtbrg.Location = new System.Drawing.Point(357, 150);
+            this.txtbrg.Location = new System.Drawing.Point(357, 152);
             this.txtbrg.Name = "txtbrg";
-            this.txtbrg.Size = new System.Drawing.Size(348, 30);
+            this.txtbrg.Size = new System.Drawing.Size(348, 26);
             this.txtbrg.TabIndex = 43;
             // 
             // txtharga
             // 
             this.txtharga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtharga.Location = new System.Drawing.Point(357, 199);
+            this.txtharga.Location = new System.Drawing.Point(357, 201);
             this.txtharga.Name = "txtharga";
-            this.txtharga.Size = new System.Drawing.Size(348, 30);
+            this.txtharga.Size = new System.Drawing.Size(348, 26);
             this.txtharga.TabIndex = 44;
             // 
             // tableLayoutPanel1
@@ -276,9 +276,9 @@ namespace PengirimanBarang
             // 
             this.cbxnama.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxnama.FormattingEnabled = true;
-            this.cbxnama.Location = new System.Drawing.Point(357, 103);
+            this.cbxnama.Location = new System.Drawing.Point(357, 105);
             this.cbxnama.Name = "cbxnama";
-            this.cbxnama.Size = new System.Drawing.Size(348, 33);
+            this.cbxnama.Size = new System.Drawing.Size(348, 28);
             this.cbxnama.TabIndex = 31;
             // 
             // btndelete
@@ -298,7 +298,7 @@ namespace PengirimanBarang
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -307,13 +307,13 @@ namespace PengirimanBarang
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -328,14 +328,14 @@ namespace PengirimanBarang
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -343,7 +343,7 @@ namespace PengirimanBarang
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -352,13 +352,13 @@ namespace PengirimanBarang
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -366,7 +366,7 @@ namespace PengirimanBarang
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorDeleteItem
@@ -375,7 +375,7 @@ namespace PengirimanBarang
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigator1
@@ -404,7 +404,7 @@ namespace PengirimanBarang
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1067, 33);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1067, 31);
             this.bindingNavigator1.TabIndex = 25;
             this.bindingNavigator1.Text = "bindingNavigator1";
             this.bindingNavigator1.RefreshItems += new System.EventHandler(this.bindingNavigator1_RefreshItems);
@@ -434,7 +434,7 @@ namespace PengirimanBarang
             // 
             // resi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.btndelete);

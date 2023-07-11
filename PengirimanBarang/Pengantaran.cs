@@ -94,6 +94,10 @@ namespace PengirimanBarang
                 cmd.Parameters.Add(new SqlParameter("@id_kurir", idkurir));
                 cmd.Parameters.Add(new SqlParameter("@estimasi_penerimaan", estimasipenerimaan));
                 cmd.ExecuteNonQuery();
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
             }
         }
     }

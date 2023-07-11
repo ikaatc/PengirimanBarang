@@ -31,25 +31,24 @@ namespace PengirimanBarang
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.datapengirim = new System.Windows.Forms.ToolStripMenuItem();
-            this.databarang = new System.Windows.Forms.ToolStripMenuItem();
-            this.datakaryawan = new System.Windows.Forms.ToolStripMenuItem();
-            this.datakurir = new System.Windows.Forms.ToolStripMenuItem();
-            this.datapenerima = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.dataresi = new System.Windows.Forms.ToolStripMenuItem();
             this.datapengiriman = new System.Windows.Forms.ToolStripMenuItem();
             this.datapengantaran = new System.Windows.Forms.ToolStripMenuItem();
             this.datadetail = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnpeng = new System.Windows.Forms.Button();
+            this.btnb = new System.Windows.Forms.Button();
+            this.btnka = new System.Windows.Forms.Button();
+            this.btnku = new System.Windows.Forms.Button();
+            this.btnpen = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.PeachPuff;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
             this.toolStripDropDownButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -57,58 +56,6 @@ namespace PengirimanBarang
             this.toolStrip1.Size = new System.Drawing.Size(1067, 50);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.datapengirim,
-            this.databarang,
-            this.datakaryawan,
-            this.datakurir,
-            this.datapenerima});
-            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(192, 45);
-            this.toolStripDropDownButton1.Text = "Data Utama";
-            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
-            // 
-            // datapengirim
-            // 
-            this.datapengirim.Name = "datapengirim";
-            this.datapengirim.Size = new System.Drawing.Size(321, 50);
-            this.datapengirim.Text = "Data Pengirim";
-            this.datapengirim.Click += new System.EventHandler(this.datapengirim_Click);
-            // 
-            // databarang
-            // 
-            this.databarang.Name = "databarang";
-            this.databarang.Size = new System.Drawing.Size(321, 50);
-            this.databarang.Text = "Data Barang";
-            this.databarang.Click += new System.EventHandler(this.databarang_Click);
-            // 
-            // datakaryawan
-            // 
-            this.datakaryawan.Name = "datakaryawan";
-            this.datakaryawan.Size = new System.Drawing.Size(321, 50);
-            this.datakaryawan.Text = "Data Karyawan";
-            this.datakaryawan.Click += new System.EventHandler(this.datakaryawan_Click);
-            // 
-            // datakurir
-            // 
-            this.datakurir.Name = "datakurir";
-            this.datakurir.Size = new System.Drawing.Size(321, 50);
-            this.datakurir.Text = "Data Kurir";
-            this.datakurir.Click += new System.EventHandler(this.datakurir_Click);
-            // 
-            // datapenerima
-            // 
-            this.datapenerima.Name = "datapenerima";
-            this.datapenerima.Size = new System.Drawing.Size(321, 50);
-            this.datapenerima.Text = "Data Penerima";
-            this.datapenerima.Click += new System.EventHandler(this.datapenerima_Click);
             // 
             // toolStripDropDownButton2
             // 
@@ -154,11 +101,72 @@ namespace PengirimanBarang
             this.datadetail.Text = "Data Detail Penerima";
             this.datadetail.Click += new System.EventHandler(this.datadetail_Click);
             // 
+            // btnpeng
+            // 
+            this.btnpeng.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpeng.Location = new System.Drawing.Point(160, 228);
+            this.btnpeng.Name = "btnpeng";
+            this.btnpeng.Size = new System.Drawing.Size(172, 78);
+            this.btnpeng.TabIndex = 1;
+            this.btnpeng.Text = "Pengirim";
+            this.btnpeng.UseVisualStyleBackColor = true;
+            this.btnpeng.Click += new System.EventHandler(this.btnpeng_Click);
+            // 
+            // btnb
+            // 
+            this.btnb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnb.Location = new System.Drawing.Point(452, 228);
+            this.btnb.Name = "btnb";
+            this.btnb.Size = new System.Drawing.Size(172, 78);
+            this.btnb.TabIndex = 2;
+            this.btnb.Text = "Barang";
+            this.btnb.UseVisualStyleBackColor = true;
+            this.btnb.Click += new System.EventHandler(this.btnb_Click);
+            // 
+            // btnka
+            // 
+            this.btnka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnka.Location = new System.Drawing.Point(298, 384);
+            this.btnka.Name = "btnka";
+            this.btnka.Size = new System.Drawing.Size(172, 78);
+            this.btnka.TabIndex = 3;
+            this.btnka.Text = "Karyawan";
+            this.btnka.UseVisualStyleBackColor = true;
+            this.btnka.Click += new System.EventHandler(this.btnka_Click);
+            // 
+            // btnku
+            // 
+            this.btnku.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnku.Location = new System.Drawing.Point(586, 384);
+            this.btnku.Name = "btnku";
+            this.btnku.Size = new System.Drawing.Size(172, 78);
+            this.btnku.TabIndex = 4;
+            this.btnku.Text = "Kurir";
+            this.btnku.UseVisualStyleBackColor = true;
+            this.btnku.Click += new System.EventHandler(this.btnku_Click);
+            // 
+            // btnpen
+            // 
+            this.btnpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpen.Location = new System.Drawing.Point(715, 228);
+            this.btnpen.Name = "btnpen";
+            this.btnpen.Size = new System.Drawing.Size(172, 78);
+            this.btnpen.TabIndex = 5;
+            this.btnpen.Text = "Penerima";
+            this.btnpen.UseVisualStyleBackColor = true;
+            this.btnpen.Click += new System.EventHandler(this.btnpen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PengirimanBarang.Properties.Resources.Infamuse__1_;
             this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.Controls.Add(this.btnpen);
+            this.Controls.Add(this.btnku);
+            this.Controls.Add(this.btnka);
+            this.Controls.Add(this.btnb);
+            this.Controls.Add(this.btnpeng);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -175,17 +183,16 @@ namespace PengirimanBarang
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem datapengirim;
-        private System.Windows.Forms.ToolStripMenuItem databarang;
-        private System.Windows.Forms.ToolStripMenuItem datakaryawan;
-        private System.Windows.Forms.ToolStripMenuItem datakurir;
-        private System.Windows.Forms.ToolStripMenuItem datapenerima;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem dataresi;
         private System.Windows.Forms.ToolStripMenuItem datapengiriman;
         private System.Windows.Forms.ToolStripMenuItem datapengantaran;
         private System.Windows.Forms.ToolStripMenuItem datadetail;
+        private System.Windows.Forms.Button btnpeng;
+        private System.Windows.Forms.Button btnb;
+        private System.Windows.Forms.Button btnka;
+        private System.Windows.Forms.Button btnku;
+        private System.Windows.Forms.Button btnpen;
     }
 }
 

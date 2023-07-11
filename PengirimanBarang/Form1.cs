@@ -32,38 +32,10 @@ namespace PengirimanBarang
 
         }
 
-        private void databarang_Click(object sender, EventArgs e)
-        {
-            barang bar = new barang();
-            bar.Show();
-            this.Hide();
-        }
-
         private void datapengirim_Click(object sender, EventArgs e)
         {
             pengirim peng = new pengirim();
             peng.Show();
-            this.Hide();
-        }
-
-        private void datakaryawan_Click(object sender, EventArgs e)
-        {
-            karyawan kar = new karyawan();
-            kar.Show();
-            this.Hide();
-        }
-
-        private void datakurir_Click(object sender, EventArgs e)
-        {
-            kurir kur = new kurir();
-            kur.Show();
-            this.Hide();
-        }
-
-        private void datapenerima_Click(object sender, EventArgs e)
-        {
-            penerima pen = new penerima();
-            pen.Show();
             this.Hide();
         }
 
@@ -97,6 +69,41 @@ namespace PengirimanBarang
         {
             detail_penerima det = new detail_penerima();
             det.Show();
+            this.Hide();
+        }
+
+        private void btnpeng_Click(object sender, EventArgs e)
+        {
+            pengirim peng = new pengirim();
+            peng.Show();
+            this.Hide();
+        }
+
+        private void btnb_Click(object sender, EventArgs e)
+        {
+            barang bar = new barang();
+            bar.Show();
+            this.Hide();
+        }
+
+        private void btnpen_Click(object sender, EventArgs e)
+        {
+            penerima pen = new penerima();
+            pen.Show();
+            this.Hide();
+        }
+
+        private void btnka_Click(object sender, EventArgs e)
+        {
+            karyawan kar = new karyawan();
+            kar.Show();
+            this.Hide();
+        }
+
+        private void btnku_Click(object sender, EventArgs e)
+        {
+            kurir kur = new kurir();
+            kur.Show();
             this.Hide();
         }
     }

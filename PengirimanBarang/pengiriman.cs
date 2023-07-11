@@ -78,6 +78,12 @@ namespace PengirimanBarang
             idpenerimatxt();
         }
 
+        private void btnopen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnopen.Enabled = false;
+        }
+
         private void dataGridView()
         {
             koneksi.Open();

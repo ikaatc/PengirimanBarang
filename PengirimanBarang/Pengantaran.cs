@@ -30,5 +30,15 @@ namespace PengirimanBarang
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            cbxidpengantaran.Enabled = true;
+            cbxidkaryawan.Enabled = true;
+            cbxidkurir.Enabled = true;
+            dtpenerimaan.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+        }
     }
 }

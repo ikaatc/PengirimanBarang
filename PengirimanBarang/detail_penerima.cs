@@ -46,5 +46,12 @@ namespace PengirimanBarang
             cbxidpenerima.ValueMember = "id_penerima";
             cbxidpenerima.DataSource = ds.Tables[0];
         }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Form1 hu = new Form1();
+            hu.Show();
+            this.Hide();
+        }
     }
 }

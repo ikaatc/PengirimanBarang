@@ -30,21 +30,21 @@
         {
             this.btndelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtditerima = new System.Windows.Forms.DateTimePicker();
             this.cbxiddetail = new System.Windows.Forms.ComboBox();
             this.cbxidkurir = new System.Windows.Forms.ComboBox();
             this.cbxidpenerima = new System.Windows.Forms.ComboBox();
+            this.dtditerima = new System.Windows.Forms.DateTimePicker();
+            this.txtbuktipenerima = new System.Windows.Forms.TextBox();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
             this.datapengirim = new System.Windows.Forms.Label();
             this.btnback = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtbuktipenerima = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,10 +53,10 @@
             // btndelete
             // 
             this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.Location = new System.Drawing.Point(913, 81);
-            this.btndelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btndelete.Location = new System.Drawing.Point(1027, 101);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(112, 41);
+            this.btndelete.Size = new System.Drawing.Size(126, 51);
             this.btndelete.TabIndex = 62;
             this.btndelete.Text = "Delete";
             this.btndelete.UseVisualStyleBackColor = true;
@@ -76,26 +76,37 @@
             this.tableLayoutPanel1.Controls.Add(this.cbxidpenerima, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.dtditerima, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtbuktipenerima, 1, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(165, 237);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(186, 296);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(708, 275);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(796, 344);
             this.tableLayoutPanel1.TabIndex = 61;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 301);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(392, 20);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Tanggal Diterima";
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 19);
+            this.label1.Location = new System.Drawing.Point(3, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 16);
+            this.label1.Size = new System.Drawing.Size(392, 20);
             this.label1.TabIndex = 30;
             this.label1.Text = "ID Detail Penerima";
             // 
@@ -103,9 +114,9 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 73);
+            this.label2.Location = new System.Drawing.Point(3, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(348, 16);
+            this.label2.Size = new System.Drawing.Size(392, 20);
             this.label2.TabIndex = 31;
             this.label2.Text = "ID Kurir";
             // 
@@ -113,9 +124,9 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 186);
+            this.label4.Location = new System.Drawing.Point(3, 234);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(348, 16);
+            this.label4.Size = new System.Drawing.Size(392, 20);
             this.label4.TabIndex = 33;
             this.label4.Text = "Bukti Penerimaan";
             // 
@@ -123,54 +134,67 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 129);
+            this.label3.Location = new System.Drawing.Point(3, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(348, 16);
+            this.label3.Size = new System.Drawing.Size(392, 20);
             this.label3.TabIndex = 38;
             this.label3.Text = "ID Penerima";
-            // 
-            // dtditerima
-            // 
-            this.dtditerima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtditerima.Location = new System.Drawing.Point(357, 237);
-            this.dtditerima.Name = "dtditerima";
-            this.dtditerima.Size = new System.Drawing.Size(348, 22);
-            this.dtditerima.TabIndex = 39;
             // 
             // cbxiddetail
             // 
             this.cbxiddetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxiddetail.FormattingEnabled = true;
-            this.cbxiddetail.Location = new System.Drawing.Point(357, 15);
+            this.cbxiddetail.Location = new System.Drawing.Point(401, 20);
+            this.cbxiddetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxiddetail.Name = "cbxiddetail";
-            this.cbxiddetail.Size = new System.Drawing.Size(348, 24);
+            this.cbxiddetail.Size = new System.Drawing.Size(392, 28);
             this.cbxiddetail.TabIndex = 30;
             // 
             // cbxidkurir
             // 
             this.cbxidkurir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxidkurir.FormattingEnabled = true;
-            this.cbxidkurir.Location = new System.Drawing.Point(357, 69);
+            this.cbxidkurir.Location = new System.Drawing.Point(401, 88);
+            this.cbxidkurir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxidkurir.Name = "cbxidkurir";
-            this.cbxidkurir.Size = new System.Drawing.Size(348, 24);
+            this.cbxidkurir.Size = new System.Drawing.Size(392, 28);
             this.cbxidkurir.TabIndex = 31;
             // 
             // cbxidpenerima
             // 
             this.cbxidpenerima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxidpenerima.FormattingEnabled = true;
-            this.cbxidpenerima.Location = new System.Drawing.Point(357, 125);
+            this.cbxidpenerima.Location = new System.Drawing.Point(401, 159);
+            this.cbxidpenerima.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxidpenerima.Name = "cbxidpenerima";
-            this.cbxidpenerima.Size = new System.Drawing.Size(348, 24);
+            this.cbxidpenerima.Size = new System.Drawing.Size(392, 28);
             this.cbxidpenerima.TabIndex = 40;
+            // 
+            // dtditerima
+            // 
+            this.dtditerima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtditerima.Location = new System.Drawing.Point(401, 298);
+            this.dtditerima.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtditerima.Name = "dtditerima";
+            this.dtditerima.Size = new System.Drawing.Size(392, 26);
+            this.dtditerima.TabIndex = 39;
+            // 
+            // txtbuktipenerima
+            // 
+            this.txtbuktipenerima.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtbuktipenerima.Location = new System.Drawing.Point(401, 231);
+            this.txtbuktipenerima.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbuktipenerima.Name = "txtbuktipenerima";
+            this.txtbuktipenerima.Size = new System.Drawing.Size(391, 26);
+            this.txtbuktipenerima.TabIndex = 42;
             // 
             // btnclear
             // 
             this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(761, 519);
-            this.btnclear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnclear.Location = new System.Drawing.Point(856, 649);
+            this.btnclear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(112, 41);
+            this.btnclear.Size = new System.Drawing.Size(126, 51);
             this.btnclear.TabIndex = 60;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = true;
@@ -178,10 +202,10 @@
             // btnsave
             // 
             this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsave.Location = new System.Drawing.Point(455, 519);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnsave.Location = new System.Drawing.Point(512, 649);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(112, 41);
+            this.btnsave.Size = new System.Drawing.Size(126, 51);
             this.btnsave.TabIndex = 59;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = true;
@@ -189,10 +213,10 @@
             // btnadd
             // 
             this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.Location = new System.Drawing.Point(165, 519);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnadd.Location = new System.Drawing.Point(186, 649);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(112, 41);
+            this.btnadd.Size = new System.Drawing.Size(126, 51);
             this.btnadd.TabIndex = 58;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
@@ -201,57 +225,41 @@
             // 
             this.datapengirim.AutoSize = true;
             this.datapengirim.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datapengirim.Location = new System.Drawing.Point(414, 39);
+            this.datapengirim.Location = new System.Drawing.Point(466, 49);
             this.datapengirim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.datapengirim.Name = "datapengirim";
-            this.datapengirim.Size = new System.Drawing.Size(216, 26);
+            this.datapengirim.Size = new System.Drawing.Size(249, 30);
             this.datapengirim.TabIndex = 56;
             this.datapengirim.Text = "Detail Pengantaran";
             // 
             // btnback
             // 
             this.btnback.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnback.Location = new System.Drawing.Point(22, 81);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4);
+            this.btnback.Location = new System.Drawing.Point(25, 101);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(112, 41);
+            this.btnback.Size = new System.Drawing.Size(126, 51);
             this.btnback.TabIndex = 55;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(348, 16);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "Tanggal Diterima";
-            // 
-            // txtbuktipenerima
-            // 
-            this.txtbuktipenerima.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbuktipenerima.Location = new System.Drawing.Point(357, 183);
-            this.txtbuktipenerima.Name = "txtbuktipenerima";
-            this.txtbuktipenerima.Size = new System.Drawing.Size(348, 22);
-            this.txtbuktipenerima.TabIndex = 42;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(165, 81);
+            this.dataGridView1.Location = new System.Drawing.Point(186, 101);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(796, 188);
             this.dataGridView1.TabIndex = 63;
             // 
             // detail_penerima
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.ClientSize = new System.Drawing.Size(1200, 702);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -261,6 +269,7 @@
             this.Controls.Add(this.datapengirim);
             this.Controls.Add(this.btnback);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "detail_penerima";
             this.Text = "detail_penerima";
             this.tableLayoutPanel1.ResumeLayout(false);

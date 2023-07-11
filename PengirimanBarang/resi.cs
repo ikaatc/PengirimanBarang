@@ -20,6 +20,7 @@ namespace PengirimanBarang
         public resi()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
         }
 
         private void resi_Load(object sender, EventArgs e)

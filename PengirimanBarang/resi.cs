@@ -234,6 +234,18 @@ namespace PengirimanBarang
             cm.Parameters.Add(new SqlParameter("@nmb", nm));
             SqlDataReader dr = cm.ExecuteReader();
             dr.Close();
+            string str = "insert into dbo.resi (no_resi, id_pengirim, nm_barang, tgl_pengiriman, berat_brg, harga_pengiriman)" +
+                "values (@no, @id, @nm, @tgl, @berat, @harga)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@no", no));
+            cmd.Parameters.Add(new SqlParameter("@id", id));
+            cmd.Parameters.Add(new SqlParameter("@nm", nm));
+            cmd.Parameters.Add(new SqlParameter("@berat", berat));
+            cmd.Parameters.Add(new SqlParameter("@harga", harga));
+            cmd.Parameters.Add(new SqlParameter("@tgl", tgl));
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
         }
     }
 }

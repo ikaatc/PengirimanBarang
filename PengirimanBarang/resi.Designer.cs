@@ -48,6 +48,7 @@ namespace PengirimanBarang
             this.txtbrg = new System.Windows.Forms.TextBox();
             this.txtharga = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbxnama = new System.Windows.Forms.ComboBox();
             this.btndelete = new System.Windows.Forms.Button();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -61,10 +62,17 @@ namespace PengirimanBarang
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.cbxnama = new System.Windows.Forms.ComboBox();
+            this.resiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pengirimanBarangDataSet = new PengirimanBarang.PengirimanBarangDataSet();
+            this.pengirimBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pengirimTableAdapter = new PengirimanBarang.PengirimanBarangDataSetTableAdapters.pengirimTableAdapter();
+            this.resiTableAdapter = new PengirimanBarang.PengirimanBarangDataSetTableAdapters.resiTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.resiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pengirimanBarangDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pengirimBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnback
@@ -130,7 +138,7 @@ namespace PengirimanBarang
             // 
             this.cbxidpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxidpengirim.FormattingEnabled = true;
-            this.cbxidpengirim.Location = new System.Drawing.Point(357, 55);
+            this.cbxidpengirim.Location = new System.Drawing.Point(357, 57);
             this.cbxidpengirim.Name = "cbxidpengirim";
             this.cbxidpengirim.Size = new System.Drawing.Size(348, 33);
             this.cbxidpengirim.TabIndex = 30;
@@ -264,6 +272,15 @@ namespace PengirimanBarang
             this.tableLayoutPanel1.Size = new System.Drawing.Size(708, 288);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
+            // cbxnama
+            // 
+            this.cbxnama.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxnama.FormattingEnabled = true;
+            this.cbxnama.Location = new System.Drawing.Point(357, 103);
+            this.cbxnama.Name = "cbxnama";
+            this.cbxnama.Size = new System.Drawing.Size(348, 33);
+            this.cbxnama.TabIndex = 31;
+            // 
             // btndelete
             // 
             this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,6 +381,7 @@ namespace PengirimanBarang
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.resiBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -389,15 +407,30 @@ namespace PengirimanBarang
             this.bindingNavigator1.Size = new System.Drawing.Size(1067, 33);
             this.bindingNavigator1.TabIndex = 25;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            this.bindingNavigator1.RefreshItems += new System.EventHandler(this.bindingNavigator1_RefreshItems);
             // 
-            // cbxnama
+            // resiBindingSource
             // 
-            this.cbxnama.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxnama.FormattingEnabled = true;
-            this.cbxnama.Location = new System.Drawing.Point(357, 101);
-            this.cbxnama.Name = "cbxnama";
-            this.cbxnama.Size = new System.Drawing.Size(348, 33);
-            this.cbxnama.TabIndex = 31;
+            this.resiBindingSource.DataMember = "resi";
+            this.resiBindingSource.DataSource = this.pengirimanBarangDataSet;
+            // 
+            // pengirimanBarangDataSet
+            // 
+            this.pengirimanBarangDataSet.DataSetName = "PengirimanBarangDataSet";
+            this.pengirimanBarangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pengirimBindingSource
+            // 
+            this.pengirimBindingSource.DataMember = "pengirim";
+            this.pengirimBindingSource.DataSource = this.pengirimanBarangDataSet;
+            // 
+            // pengirimTableAdapter
+            // 
+            this.pengirimTableAdapter.ClearBeforeFill = true;
+            // 
+            // resiTableAdapter
+            // 
+            this.resiTableAdapter.ClearBeforeFill = true;
             // 
             // resi
             // 
@@ -423,6 +456,9 @@ namespace PengirimanBarang
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.resiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pengirimanBarangDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pengirimBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,6 +496,11 @@ namespace PengirimanBarang
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private PengirimanBarangDataSet pengirimanBarangDataSet;
+        private System.Windows.Forms.BindingSource pengirimBindingSource;
+        private PengirimanBarangDataSetTableAdapters.pengirimTableAdapter pengirimTableAdapter;
+        private System.Windows.Forms.BindingSource resiBindingSource;
+        private PengirimanBarangDataSetTableAdapters.resiTableAdapter resiTableAdapter;
         private System.Windows.Forms.ComboBox cbxnama;
     }
 }

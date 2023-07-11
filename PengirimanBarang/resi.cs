@@ -17,7 +17,7 @@ namespace PengirimanBarang
         private string stringConnection = "data source=DESKTOP-9NQGA7N\\IKATC;" + "database=PengirimanBarang; User ID = sa; Password = 1234";
         private SqlConnection koneksi;
 
-        private string no, id, nm, brg, berat, harga;
+        private string no, id, nm, berat, harga;
         private DateTime tgl;
         BindingSource customersBindingSource = new BindingSource();
         public resi()
@@ -26,16 +26,6 @@ namespace PengirimanBarang
             koneksi = new SqlConnection(stringConnection);
             this.bindingNavigator1.BindingSource = this.customersBindingSource;
             refreshform();
-        }
-
-        private void dataGridView()
-        {
-            koneksi.Open();
-            string str = "select no_resi, id_pengirim, nm_barang, tgl_pengiriman, berat_brg, harga_pengiriman from dbo.resi";
-            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            koneksi.Close();
         }
 
         private void refreshform()
@@ -58,7 +48,7 @@ namespace PengirimanBarang
             SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("select m.no_resi, p.id_pengirim, k.nm_barang, m.berat_brg, " +
                 "m.harga_pengiriman, m.tgl_pengiriman from dbo.resi m " +
                 "join dbo.pengirim p on m.id_pengirim = p.id_pengirim " +
-                "join dbo.barang k on m.nm_barang = k.nm_barang", koneksi));
+                "join dbo.barang k on m.id_barang = k.id_barang", koneksi));
 
             DataSet ds = new DataSet();
             dataAdapter1.Fill(ds);
@@ -77,6 +67,8 @@ namespace PengirimanBarang
             this.datetime.DataBindings.Add(
                 new Binding("Text", this.customersBindingSource, "tgl_pengiriman", true));
             koneksi.Close();
+
+            this.bindingNavigator1.BindingSource = this.customersBindingSource;
         }
 
         private void clearBinding()
@@ -108,7 +100,7 @@ namespace PengirimanBarang
         private void nmbarangtxt()
         {
             koneksi.Open();
-            string str = "SELECT nm_barang FROM dbo.barang";
+            string str = "SELECT id_barang, nm_barang FROM dbo.barang";
 
             SqlCommand cmd = new SqlCommand(str, koneksi);
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
@@ -118,11 +110,16 @@ namespace PengirimanBarang
             koneksi.Close();
 
             cbxnama.DisplayMember = "nm_barang";
+            cbxnama.ValueMember = "id_barang";
             cbxnama.DataSource = ds.Tables[0];
         }
 
         private void resi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pengirimanBarangDataSet.resi' table. You can move, or remove it, as needed.
+            this.resiTableAdapter.Fill(this.pengirimanBarangDataSet.resi);
+            // TODO: This line of code loads data into the 'pengirimanBarangDataSet.pengirim' table. You can move, or remove it, as needed.
+            this.pengirimTableAdapter.Fill(this.pengirimanBarangDataSet.pengirim);
 
         }
 
@@ -181,6 +178,11 @@ namespace PengirimanBarang
 
         }
 
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnback_Click(object sender, EventArgs e)
         {
             Form1 hu = new Form1();
@@ -208,7 +210,6 @@ namespace PengirimanBarang
 
         private void cbxidpengirim_SelectedIndexChanged(object sender, EventArgs e)
         {
-            nmbarangtxt();
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -220,22 +221,22 @@ namespace PengirimanBarang
         {
             no = txtnoresi.Text;
             id = cbxidpengirim.Text;
-            nm = cbxnama.Text;
+            nm = cbxnama.SelectedValue.ToString();
             berat = txtbrg.Text;
             harga = txtharga.Text;
             tgl = datetime.Value;
 
             koneksi.Open();
-            string strs = "select id_pengirim from dbo.pengirim where id_pengirim = @idp;" +
-             "select nm_barang from dbo.barang where nm_barang = @nmb";
+            string strs = "select id_pengirim, id_barang from dbo.pengirim, dbo.barang " +
+              "where id_pengirim = @idp and nm_barang = @nmb";
             SqlCommand cm = new SqlCommand(strs, koneksi);
             cm.CommandType = CommandType.Text;
             cm.Parameters.Add(new SqlParameter("@idp", id));
             cm.Parameters.Add(new SqlParameter("@nmb", nm));
             SqlDataReader dr = cm.ExecuteReader();
             dr.Close();
-            string str = "insert into dbo.resi (no_resi, id_pengirim, nm_barang, tgl_pengiriman, berat_brg, harga_pengiriman)" +
-                "values (@no, @id, @nm, @tgl, @berat, @harga)";
+            string str = "insert into dbo.resi (no_resi, id_pengirim, id_barang, tgl_pengiriman, berat_brg, harga_pengiriman) " +
+             "values (@no, @id, @nm, @tgl, @berat, @harga)";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add(new SqlParameter("@no", no));

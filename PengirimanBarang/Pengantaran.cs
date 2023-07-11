@@ -22,6 +22,32 @@ namespace PengirimanBarang
             refreshform();
         }
 
+        private void idkaryawantxt()
+        {
+            koneksi.Open();
+            string str = "select id_karyawan from dbo.karyawan";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            koneksi.Close();
+            cbxidkaryawan.ValueMember = "id_karyawan";
+            cbxidkaryawan.DataSource = ds.Tables[0];
+        }
+
+        private void idkurirtxt()
+        {
+            koneksi.Open();
+            string str = "select id_kurir from dbo.kurir";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            koneksi.Close();
+            cbxidkurir.ValueMember = "id_kurir";
+            cbxidkurir.DataSource = ds.Tables[0];
+        }
+
         private void dataGridView()
         {
             koneksi.Open();
@@ -35,8 +61,8 @@ namespace PengirimanBarang
 
         private void refreshform()
         {
-            cbxidpengantaran.Text = "";
-            cbxidpengantaran.Enabled = false;
+            txtidpengantaran.Text = "";
+            txtidpengantaran.Enabled = false;
             cbxidkaryawan.Text = "";
             cbxidkaryawan.Enabled = false;
             cbxidkurir.Text = "";
@@ -49,58 +75,44 @@ namespace PengirimanBarang
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            cbxidpengantaran.Enabled = true;
+            txtidpengantaran.Enabled = true;
             cbxidkaryawan.Enabled = true;
             cbxidkurir.Enabled = true;
             dtpenerimaan.Enabled = true;
             btnsave.Enabled = true;
             btnclear.Enabled = true;
+            idkaryawantxt();
+            idkurirtxt();
         }
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            string idpengantaran = cbxidpengantaran.Text;
+            string idpengantaran = txtidpengantaran.Text;
             string idkaryawan = cbxidkaryawan.Text;
             string idkurir = cbxidkurir.Text;
-            string estimasipenerimaan = dtpenerimaan.Text;
+            DateTime estimasipenerimaan = dtpenerimaan.Value;
+            
+            koneksi.Open();
+            string strs = "select id_karyawan from dbo.karyawan where id_karyawan = @idk, select id_kurir from dbo.kurir where id_kurir = @idku";
+            SqlCommand cm = new SqlCommand(strs, koneksi);
+            cm.CommandType = CommandType.Text;
+            cm.Parameters.Add(new SqlParameter("@idk", idkaryawan));
+            cm.Parameters.Add(new SqlParameter("@idku", idkurir));
 
-            if (idpengantaran == "")
-            {
-                MessageBox.Show("Masukkan ID Pengantaran", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            if (idkaryawan == "")
-            {
-                MessageBox.Show("Masukkan ID Karyawan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            if (idkurir == "")
-            {
-                MessageBox.Show("Masukkan ID Kurir", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            if (estimasipenerimaan == "")
-            {
-                MessageBox.Show("Masukkan Estimasi Penerimaan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            else
-            {
-                koneksi.Open();
-                string str = "INSERT INTO pengantaran (id_pengantaran, id_karyawan, id_kurir, estimasi_penerimaan) " +
-                    "VALUES (@id_pengantaran, @id_karyawan, @id_kurir, @estimasi_penerimaan)";
-                SqlCommand cmd = new SqlCommand(str, koneksi);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("@id_pengantaran", idpengantaran));
-                cmd.Parameters.Add(new SqlParameter("@id_karyawan", idkaryawan));
-                cmd.Parameters.Add(new SqlParameter("@id_kurir", idkurir));
-                cmd.Parameters.Add(new SqlParameter("@estimasi_penerimaan", estimasipenerimaan));
-                cmd.ExecuteNonQuery();
-                koneksi.Close();
-                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridView();
-                refreshform();
-            }
+            string str = "INSERT INTO dbo.pengantaran (id_pengantaran, id_karyawan, id_kurir, estimasi_penerimaan) " +
+                    "VALUES (@idpengantaran, @idk, @idku, @estimasi)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@idpengantaran", idpengantaran));
+            cmd.Parameters.Add(new SqlParameter("@idk", idkaryawan));
+            cmd.Parameters.Add(new SqlParameter("@idku", idkurir));
+            cmd.Parameters.Add(new SqlParameter("@estimasi", estimasipenerimaan));
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+            refreshform();
+            
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -124,6 +136,36 @@ namespace PengirimanBarang
         private void Pengantaran_Load(object sender, EventArgs e)
         {
             refreshform();
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string idPengiriman = dataGridView1.SelectedRows[0].Cells["id_pengantaran"].Value.ToString();
+
+                DialogResult result = MessageBox.Show("Anda yakin ingin menghapus data pengantaran dengan ID " + idPengiriman + "?",
+                    "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.pengantaran WHERE id_pengantaran = @idpengantaran";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.Parameters.AddWithValue("@idpengantaran", idPengiriman);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    koneksi.Close();
+                    dataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Silakan pilih baris data yang ingin dihapus.", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

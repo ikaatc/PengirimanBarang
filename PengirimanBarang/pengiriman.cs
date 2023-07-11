@@ -23,6 +23,7 @@ namespace PengirimanBarang
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void pengiriman_Load(object sender, EventArgs e)
@@ -122,7 +123,6 @@ namespace PengirimanBarang
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Ambil ID pengiriman dari baris yang dipilih
                 string idPengiriman = dataGridView1.SelectedRows[0].Cells["id_pengiriman"].Value.ToString();
 
                 DialogResult result = MessageBox.Show("Anda yakin ingin menghapus data pengiriman dengan ID " + idPengiriman + "?",
@@ -132,8 +132,6 @@ namespace PengirimanBarang
                 {
                     
                         koneksi.Open();
-
-                        // Hapus data pengiriman berdasarkan ID pengiriman
                         string str = "DELETE FROM dbo.pengiriman WHERE id_pengiriman = @idpengiriman";
                         SqlCommand cmd = new SqlCommand(str, koneksi);
                         cmd.Parameters.AddWithValue("@idpengiriman", idPengiriman);
@@ -141,11 +139,7 @@ namespace PengirimanBarang
 
                         MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         koneksi.Close();
-                        // Refresh tampilan DataGridView
                         dataGridView();
-
-                        
-                    
                 }
             }
             else

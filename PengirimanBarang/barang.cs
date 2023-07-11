@@ -125,6 +125,54 @@ namespace PengirimanBarang
 
         }
 
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            string idPengirim = txtidpengirim.Text;
+            string idKaryawan = txtidkaryawan.Text;
+            string namaBarang = txtnmbarang.Text;
+            string jenisBarang = txtjnsbarang.Text;
+            string kategoriBarang = txtktgrbarang.Text;
+
+            if (string.IsNullOrEmpty(idPengirim) || string.IsNullOrEmpty(idKaryawan) ||
+                string.IsNullOrEmpty(namaBarang) || string.IsNullOrEmpty(jenisBarang) ||
+                string.IsNullOrEmpty(kategoriBarang))
+            {
+                MessageBox.Show("Mohon lengkapi semua kolom.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            koneksi.Open();
+
+            // Check if the specified ID values exist in the related tables
+            string checkStr = "SELECT COUNT(*) FROM dbo.pengirim WHERE id_pengirim = @idp; SELECT COUNT(*) FROM dbo.karyawan WHERE id_karyawan = @idk";
+            SqlCommand checkCmd = new SqlCommand(checkStr, koneksi);
+            checkCmd.Parameters.AddWithValue("@idp", idPengirim);
+            checkCmd.Parameters.AddWithValue("@idk", idKaryawan);
+            int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+            if (count == 0)
+            {
+                koneksi.Close();
+                MessageBox.Show("ID Pengirim atau ID Karyawan tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string updateStr = "UPDATE dbo.barang SET nm_barang = @nama, jns_barang = @jenis, kategori_barang = @kategori " +
+                               "WHERE id_pengirim = @idp AND id_karyawan = @idk";
+            SqlCommand updateCmd = new SqlCommand(updateStr, koneksi);
+            updateCmd.Parameters.AddWithValue("@nama", namaBarang);
+            updateCmd.Parameters.AddWithValue("@jenis", jenisBarang);
+            updateCmd.Parameters.AddWithValue("@kategori", kategoriBarang);
+            updateCmd.Parameters.AddWithValue("@idp", idPengirim);
+            updateCmd.Parameters.AddWithValue("@idk", idKaryawan);
+            updateCmd.ExecuteNonQuery();
+
+            koneksi.Close();
+            MessageBox.Show("Data berhasil diperbarui.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+            refreshform();
+        }
+
         private void dataGridView()
         {
             koneksi.Open();

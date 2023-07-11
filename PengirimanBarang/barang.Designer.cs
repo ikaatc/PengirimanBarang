@@ -47,6 +47,7 @@ namespace PengirimanBarang
             this.txtidkaryawan = new System.Windows.Forms.ComboBox();
             this.databarang = new System.Windows.Forms.Label();
             this.btnopen = new System.Windows.Forms.Button();
+            this.btnupdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -155,7 +156,7 @@ namespace PengirimanBarang
             // 
             this.txtidpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtidpengirim.FormattingEnabled = true;
-            this.txtidpengirim.Location = new System.Drawing.Point(376, 9);
+            this.txtidpengirim.Location = new System.Drawing.Point(376, 6);
             this.txtidpengirim.Name = "txtidpengirim";
             this.txtidpengirim.Size = new System.Drawing.Size(368, 33);
             this.txtidpengirim.TabIndex = 39;
@@ -245,7 +246,7 @@ namespace PengirimanBarang
             "Kesehatan dan Kecantikan",
             "Olahraga dan Rekreasi",
             "Perawatan Hewan"});
-            this.txtktgrbarang.Location = new System.Drawing.Point(376, 143);
+            this.txtktgrbarang.Location = new System.Drawing.Point(376, 140);
             this.txtktgrbarang.Name = "txtktgrbarang";
             this.txtktgrbarang.Size = new System.Drawing.Size(368, 33);
             this.txtktgrbarang.TabIndex = 38;
@@ -262,7 +263,7 @@ namespace PengirimanBarang
             "Kesehatan dan Kecantikan",
             "Olahraga dan Rekreasi",
             "Perawatan Hewan"});
-            this.txtidkaryawan.Location = new System.Drawing.Point(376, 189);
+            this.txtidkaryawan.Location = new System.Drawing.Point(376, 187);
             this.txtidkaryawan.Name = "txtidkaryawan";
             this.txtidkaryawan.Size = new System.Drawing.Size(368, 33);
             this.txtidkaryawan.TabIndex = 41;
@@ -292,11 +293,24 @@ namespace PengirimanBarang
             this.btnopen.UseVisualStyleBackColor = true;
             this.btnopen.Click += new System.EventHandler(this.btnopen_Click);
             // 
+            // btnupdate
+            // 
+            this.btnupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdate.Location = new System.Drawing.Point(919, 166);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(112, 41);
+            this.btnupdate.TabIndex = 39;
+            this.btnupdate.Text = "Update";
+            this.btnupdate.UseVisualStyleBackColor = true;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+            // 
             // barang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnback);
@@ -339,5 +353,6 @@ namespace PengirimanBarang
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox txtidkaryawan;
         private System.Windows.Forms.Button btnopen;
+        private System.Windows.Forms.Button btnupdate;
     }
 }

@@ -27,7 +27,7 @@ namespace PengirimanBarang
 
         private void pengiriman_Load(object sender, EventArgs e)
         {
-
+            refreshform();
         }
 
         private void idpengirimtxt()
@@ -110,6 +110,11 @@ namespace PengirimanBarang
             koneksi.Close();
             MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dataGridView();
+            refreshform();
+        }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
             refreshform();
         }
 

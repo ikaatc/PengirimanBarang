@@ -126,7 +126,7 @@ namespace PengirimanBarang
             // 
             this.cbxidpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxidpengirim.FormattingEnabled = true;
-            this.cbxidpengirim.Location = new System.Drawing.Point(357, 55);
+            this.cbxidpengirim.Location = new System.Drawing.Point(357, 57);
             this.cbxidpengirim.Name = "cbxidpengirim";
             this.cbxidpengirim.Size = new System.Drawing.Size(348, 33);
             this.cbxidpengirim.TabIndex = 30;
@@ -264,7 +264,7 @@ namespace PengirimanBarang
             // 
             this.cbxnama.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxnama.FormattingEnabled = true;
-            this.cbxnama.Location = new System.Drawing.Point(357, 101);
+            this.cbxnama.Location = new System.Drawing.Point(357, 103);
             this.cbxnama.Name = "cbxnama";
             this.cbxnama.Size = new System.Drawing.Size(348, 33);
             this.cbxnama.TabIndex = 31;

@@ -76,5 +76,17 @@ namespace PengirimanBarang
             btnsave.Enabled = true;
             btnclear.Enabled = true;
         }
+
+        private void refreshform()
+        {
+            txtno.Enabled = false;
+            cbxid.Enabled = false;
+            cbxnama.Enabled = false;
+            txtberat.Enabled = false;
+            txtharga.Enabled = false;
+            datetime.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+        }
     }
 }

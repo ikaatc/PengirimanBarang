@@ -88,5 +88,10 @@ namespace PengirimanBarang
             btnsave.Enabled = false;
             btnclear.Enabled = false;
         }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }

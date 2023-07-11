@@ -44,6 +44,7 @@
             this.datapengirim = new System.Windows.Forms.Label();
             this.btnback = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnopen = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +52,7 @@
             // btndelete
             // 
             this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.Location = new System.Drawing.Point(899, 84);
+            this.btndelete.Location = new System.Drawing.Point(911, 193);
             this.btndelete.Margin = new System.Windows.Forms.Padding(4);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(112, 41);
@@ -227,11 +228,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(708, 150);
             this.dataGridView1.TabIndex = 56;
             // 
+            // btnopen
+            // 
+            this.btnopen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnopen.Location = new System.Drawing.Point(911, 84);
+            this.btnopen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnopen.Name = "btnopen";
+            this.btnopen.Size = new System.Drawing.Size(112, 41);
+            this.btnopen.TabIndex = 57;
+            this.btnopen.Text = "Open";
+            this.btnopen.UseVisualStyleBackColor = true;
+            this.btnopen.Click += new System.EventHandler(this.btnopen_Click);
+            // 
             // Pengantaran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.Controls.Add(this.btnopen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -269,5 +283,6 @@
         private System.Windows.Forms.Label datapengirim;
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnopen;
     }
 }

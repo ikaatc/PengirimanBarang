@@ -105,5 +105,11 @@ namespace PengirimanBarang
         {
             refreshform();
         }
+
+        private void btnopen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnopen.Enabled = false;
+        }
     }
 }

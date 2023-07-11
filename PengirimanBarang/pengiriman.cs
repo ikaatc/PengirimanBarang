@@ -84,6 +84,35 @@ namespace PengirimanBarang
             btnopen.Enabled = false;
         }
 
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            idpengiriman = txtidpengiriman.Text;
+            idpengirim = cbxidpengirim.Text;
+            idpenerima = cbxidpenerima.Text;
+            tgl = dtpengantaran.Value;
+
+            koneksi.Open();
+            string strs = "select id_pengirim from dbo.pengirim where id_pengirim = @idp, select id_penerima from dbo.penerima where id_penerima = @idpn";
+            SqlCommand cm = new SqlCommand(strs, koneksi);
+            cm.CommandType = CommandType.Text;
+            cm.Parameters.Add(new SqlParameter("@idp", idpengirim));
+            cm.Parameters.Add(new SqlParameter("@idpn", idpenerima));
+
+            string str = "insert into dbo.pengiriman(id_pengiriman, id_pengirim, id_penerima, tgl_pengantaran)" +
+                "values (@idpeng, @idp, @idpn, @tgl)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@idpeng", idpengiriman);
+            cmd.Parameters.AddWithValue("@idp", idpengirim);
+            cmd.Parameters.AddWithValue("@idpn", idpenerima);
+            cmd.Parameters.AddWithValue("@tgl", tgl);
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+            refreshform();
+        }
+
         private void dataGridView()
         {
             koneksi.Open();

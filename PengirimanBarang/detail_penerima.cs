@@ -66,5 +66,16 @@ namespace PengirimanBarang
             idkurirtxt();
             idpenerimatxt();
         }
+
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select id_detail_penerima, id_kurir, id_penerima, bukti_penerima, tgl_penerima from dbo.detail_penerima";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
     }
 }

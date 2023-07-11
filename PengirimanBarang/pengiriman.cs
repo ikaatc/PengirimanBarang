@@ -63,6 +63,21 @@ namespace PengirimanBarang
             this.Hide();
         }
 
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtidpengiriman.Text = "";
+            txtidpengiriman.Enabled = true;
+            cbxidpengirim.Text = "";
+            cbxidpengirim.Enabled = true;
+            cbxidpenerima.Text = "";
+            cbxidpenerima.Enabled = true;
+            dtpengantaran.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+            idpengirimtxt();
+            idpenerimatxt();
+        }
+
         private void dataGridView()
         {
             koneksi.Open();

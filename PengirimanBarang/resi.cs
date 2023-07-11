@@ -17,6 +17,8 @@ namespace PengirimanBarang
         private string stringConnection = "data source=DESKTOP-9NQGA7N\\IKATC;" + "database=PengirimanBarang; User ID = sa; Password = 1234";
         private SqlConnection koneksi;
 
+        private string no, id, nm, brg, jenis, kategori, berat, harga;
+        private DateTime tgl;
         BindingSource customersBindingSource = new BindingSource();
         public resi()
         {
@@ -212,6 +214,11 @@ namespace PengirimanBarang
         private void btnclear_Click(object sender, EventArgs e)
         {
             refreshform();
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,5 +29,18 @@ namespace PengirimanBarang
         {
 
         }
+
+        private void idpengirimtxt()
+        {
+            koneksi.Open();
+            string str = "select id_pengirim from dbo.pengirim";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            koneksi.Close();
+            cbxidpengirim.ValueMember = "id_pengirim";
+            cbxidpengirim.DataSource = ds.Tables[0];
+        }
     }
 }

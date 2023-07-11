@@ -93,6 +93,36 @@ namespace PengirimanBarang
             refreshform();
         }
 
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string iddetail = dataGridView1.SelectedRows[0].Cells["id_detail_penerima"].Value.ToString();
+
+                DialogResult result = MessageBox.Show("Anda yakin ingin menghapus data detail penerima dengan ID " + iddetail + "?",
+                    "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.detail_penerima WHERE id_detail_penerima = @iddetail";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.Parameters.AddWithValue("@iddetail", iddetail);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    koneksi.Close();
+                    dataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Silakan pilih baris data yang ingin dihapus.", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void refreshform()
         {
             txtbuktipenerima.Enabled = false;

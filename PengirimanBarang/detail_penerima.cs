@@ -77,5 +77,11 @@ namespace PengirimanBarang
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
         }
+
+        private void btnopen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnopen.Enabled = false;
+        }
     }
 }

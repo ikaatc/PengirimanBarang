@@ -48,6 +48,8 @@ namespace PengirimanBarang
             this.btnopen = new System.Windows.Forms.Button();
             this.cbxid = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbxnm = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -188,6 +190,8 @@ namespace PengirimanBarang
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.cbxnm, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbxid, 1, 1);
@@ -221,6 +225,7 @@ namespace PengirimanBarang
             this.btndelete.TabIndex = 46;
             this.btndelete.Text = "Delete";
             this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // dataGridView1
             // 
@@ -253,6 +258,7 @@ namespace PengirimanBarang
             this.cbxid.Name = "cbxid";
             this.cbxid.Size = new System.Drawing.Size(348, 28);
             this.cbxid.TabIndex = 30;
+            this.cbxid.SelectedIndexChanged += new System.EventHandler(this.cbxid_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -263,6 +269,25 @@ namespace PengirimanBarang
             this.label2.Size = new System.Drawing.Size(348, 20);
             this.label2.TabIndex = 31;
             this.label2.Text = "ID Pengirim";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(348, 20);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Nama Barang";
+            // 
+            // cbxnm
+            // 
+            this.cbxnm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxnm.FormattingEnabled = true;
+            this.cbxnm.Location = new System.Drawing.Point(357, 103);
+            this.cbxnm.Name = "cbxnm";
+            this.cbxnm.Size = new System.Drawing.Size(348, 28);
+            this.cbxnm.TabIndex = 50;
             // 
             // resi
             // 
@@ -311,5 +336,7 @@ namespace PengirimanBarang
         private System.Windows.Forms.Button btnopen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxid;
+        private System.Windows.Forms.ComboBox cbxnm;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -35,7 +35,7 @@ namespace PengirimanBarang
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select no_resi, id_pengirim, berat_brg, harga_pengiriman, tgl_pengiriman from dbo.resi";
+            string str = "select no_resi, id_pengirim, nm_barang, berat_brg, harga_pengiriman, tgl_pengiriman from dbo.resi";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -59,6 +59,22 @@ namespace PengirimanBarang
             cbxid.DataSource = ds.Tables[0];
         }
 
+        private void nmbarangtxt()
+        {
+            koneksi.Open();
+            string str = "SELECT nm_barang FROM dbo.barang";
+
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+
+            cbxnm.DisplayMember = "nm_barang";
+            cbxnm.DataSource = ds.Tables[0];
+        }
+
         private void btnback_Click(object sender, EventArgs e)
         {
             Form1 hu = new Form1();
@@ -70,23 +86,57 @@ namespace PengirimanBarang
         {
             txtno.Enabled = true;
             cbxid.Enabled = true;
+            cbxnm.Enabled = true;
             txtberat.Enabled = true;
             txtharga.Enabled = true;
             datetime.Enabled = true;
             btnsave.Enabled = true;
             btnclear.Enabled = true;
             idpengirimtxt();
+            nmbarangtxt();
         }
 
         private void refreshform()
         {
             txtno.Enabled = false;
             cbxid.Enabled = false;
+            cbxnm.Enabled = false;
             txtberat.Enabled = false;
             txtharga.Enabled = false;
             datetime.Enabled = false;
             btnsave.Enabled = false;
             btnclear.Enabled = false;
+        }
+
+        private void cbxid_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string noResi = dataGridView1.SelectedRows[0].Cells["no_resi"].Value.ToString();
+
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.resi WHERE no_resi = @noResi";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.Parameters.AddWithValue("@noResi", noResi);
+                    cmd.ExecuteNonQuery();
+                    koneksi.Close();
+
+                    MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih baris data yang ingin dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -107,6 +157,7 @@ namespace PengirimanBarang
             harga = txtharga.Text;
             tgl = datetime.Value;
             id = cbxid.Text;
+            string nm = cbxnm.Text;
 
             koneksi.Open();
             string strs = "select id_pengirim from dbo.pengirim where id_pengirim = @idp";
@@ -114,12 +165,13 @@ namespace PengirimanBarang
             cm.CommandType = CommandType.Text;
             cm.Parameters.Add(new SqlParameter("@idp", id));
 
-            string str = "insert into dbo.resi(no_resi, id_pengirim, berat_brg, harga_pengiriman, tgl_pengiriman)" +
-                "values (@no, @idp, @berat, @harga, @tgl)";
+            string str = "insert into dbo.resi(no_resi, id_pengirim, nm_barang, berat_brg, harga_pengiriman, tgl_pengiriman)" +
+                "values (@no, @idp, @nmb, @berat, @harga, @tgl)";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@no", no);
             cmd.Parameters.AddWithValue("@idp", id);
+            cmd.Parameters.AddWithValue("@nmb", nm);
             cmd.Parameters.AddWithValue("@berat", berat);
             cmd.Parameters.AddWithValue("@harga", harga);
             cmd.Parameters.AddWithValue("@tgl", tgl);

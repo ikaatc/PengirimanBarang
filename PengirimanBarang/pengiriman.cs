@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
+using System.Data.SqlClient;
 
 namespace PengirimanBarang
 {
@@ -15,6 +17,11 @@ namespace PengirimanBarang
         public pengiriman()
         {
             InitializeComponent();
+        }
+
+        private void pengiriman_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

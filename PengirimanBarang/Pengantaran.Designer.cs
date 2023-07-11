@@ -51,7 +51,7 @@
             // btndelete
             // 
             this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.Location = new System.Drawing.Point(901, 148);
+            this.btndelete.Location = new System.Drawing.Point(899, 84);
             this.btndelete.Margin = new System.Windows.Forms.Padding(4);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(112, 41);
@@ -72,7 +72,7 @@
             this.tableLayoutPanel1.Controls.Add(this.cbxidpengantaran, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.cbxidkaryawan, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbxidkurir, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(158, 304);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(158, 240);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -162,7 +162,7 @@
             // btnclear
             // 
             this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(736, 573);
+            this.btnclear.Location = new System.Drawing.Point(754, 495);
             this.btnclear.Margin = new System.Windows.Forms.Padding(4);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(112, 41);
@@ -173,7 +173,7 @@
             // btnsave
             // 
             this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsave.Location = new System.Drawing.Point(468, 573);
+            this.btnsave.Location = new System.Drawing.Point(468, 495);
             this.btnsave.Margin = new System.Windows.Forms.Padding(4);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(112, 41);
@@ -184,7 +184,7 @@
             // btnadd
             // 
             this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.Location = new System.Drawing.Point(183, 573);
+            this.btnadd.Location = new System.Drawing.Point(158, 495);
             this.btnadd.Margin = new System.Windows.Forms.Padding(4);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(112, 41);
@@ -196,7 +196,7 @@
             // 
             this.datapengirim.AutoSize = true;
             this.datapengirim.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datapengirim.Location = new System.Drawing.Point(463, 67);
+            this.datapengirim.Location = new System.Drawing.Point(433, 44);
             this.datapengirim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.datapengirim.Name = "datapengirim";
             this.datapengirim.Size = new System.Drawing.Size(147, 26);
@@ -206,7 +206,7 @@
             // btnback
             // 
             this.btnback.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnback.Location = new System.Drawing.Point(13, 148);
+            this.btnback.Location = new System.Drawing.Point(13, 84);
             this.btnback.Margin = new System.Windows.Forms.Padding(4);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(112, 41);
@@ -217,7 +217,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(158, 148);
+            this.dataGridView1.Location = new System.Drawing.Point(158, 84);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 620);
+            this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.tableLayoutPanel1);

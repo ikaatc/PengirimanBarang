@@ -67,6 +67,20 @@ namespace PengirimanBarang
             {
                 MessageBox.Show("Masukkan Estimasi Penerimaan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO pengantaran (id_pengantaran, id_karyawan, id_kurir, estimasi_penerimaan) " +
+                    "VALUES (@id_pengantaran, @id_karyawan, @id_kurir, @estimasi_penerimaan)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_pengantaran", idpengantaran));
+                cmd.Parameters.Add(new SqlParameter("@id_karyawan", idkaryawan));
+                cmd.Parameters.Add(new SqlParameter("@id_kurir", idkurir));
+                cmd.Parameters.Add(new SqlParameter("@estimasi_penerimaan", estimasipenerimaan));
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }

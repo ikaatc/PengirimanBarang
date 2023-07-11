@@ -55,5 +55,16 @@ namespace PengirimanBarang
             cbxidpenerima.ValueMember = "id_penerima";
             cbxidpenerima.DataSource = ds.Tables[0];
         }
+
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select id_pengiriman, id_pengirim, id_penerima, tgl_pengantaran from dbo.pengiriman";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
     }
 }

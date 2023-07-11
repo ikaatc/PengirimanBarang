@@ -64,6 +64,7 @@ namespace PengirimanBarang
             this.btnback.TabIndex = 40;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // datapengirim
             // 

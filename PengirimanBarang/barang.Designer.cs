@@ -54,6 +54,7 @@ namespace PengirimanBarang
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(135, 79);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
@@ -156,7 +157,7 @@ namespace PengirimanBarang
             // 
             this.txtidpengirim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtidpengirim.FormattingEnabled = true;
-            this.txtidpengirim.Location = new System.Drawing.Point(376, 6);
+            this.txtidpengirim.Location = new System.Drawing.Point(376, 9);
             this.txtidpengirim.Name = "txtidpengirim";
             this.txtidpengirim.Size = new System.Drawing.Size(368, 33);
             this.txtidpengirim.TabIndex = 39;
@@ -246,7 +247,7 @@ namespace PengirimanBarang
             "Kesehatan dan Kecantikan",
             "Olahraga dan Rekreasi",
             "Perawatan Hewan"});
-            this.txtktgrbarang.Location = new System.Drawing.Point(376, 140);
+            this.txtktgrbarang.Location = new System.Drawing.Point(376, 143);
             this.txtktgrbarang.Name = "txtktgrbarang";
             this.txtktgrbarang.Size = new System.Drawing.Size(368, 33);
             this.txtktgrbarang.TabIndex = 38;
@@ -263,7 +264,7 @@ namespace PengirimanBarang
             "Kesehatan dan Kecantikan",
             "Olahraga dan Rekreasi",
             "Perawatan Hewan"});
-            this.txtidkaryawan.Location = new System.Drawing.Point(376, 187);
+            this.txtidkaryawan.Location = new System.Drawing.Point(376, 189);
             this.txtidkaryawan.Name = "txtidkaryawan";
             this.txtidkaryawan.Size = new System.Drawing.Size(368, 33);
             this.txtidkaryawan.TabIndex = 41;
@@ -309,6 +310,7 @@ namespace PengirimanBarang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnopen);

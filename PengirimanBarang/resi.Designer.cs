@@ -43,13 +43,13 @@ namespace PengirimanBarang
             this.label1 = new System.Windows.Forms.Label();
             this.txtno = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbxnm = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbxid = new System.Windows.Forms.ComboBox();
             this.btndelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnopen = new System.Windows.Forms.Button();
-            this.cbxid = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbxnm = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -215,6 +215,45 @@ namespace PengirimanBarang
             this.tableLayoutPanel1.Size = new System.Drawing.Size(708, 288);
             this.tableLayoutPanel1.TabIndex = 45;
             // 
+            // cbxnm
+            // 
+            this.cbxnm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxnm.FormattingEnabled = true;
+            this.cbxnm.Location = new System.Drawing.Point(357, 103);
+            this.cbxnm.Name = "cbxnm";
+            this.cbxnm.Size = new System.Drawing.Size(348, 28);
+            this.cbxnm.TabIndex = 50;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(348, 20);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Nama Barang";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(348, 20);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "ID Pengirim";
+            // 
+            // cbxid
+            // 
+            this.cbxid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxid.FormattingEnabled = true;
+            this.cbxid.Location = new System.Drawing.Point(357, 57);
+            this.cbxid.Name = "cbxid";
+            this.cbxid.Size = new System.Drawing.Size(348, 28);
+            this.cbxid.TabIndex = 30;
+            this.cbxid.SelectedIndexChanged += new System.EventHandler(this.cbxid_SelectedIndexChanged);
+            // 
             // btndelete
             // 
             this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -229,6 +268,7 @@ namespace PengirimanBarang
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(159, 52);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
@@ -250,49 +290,11 @@ namespace PengirimanBarang
             this.btnopen.UseVisualStyleBackColor = true;
             this.btnopen.Click += new System.EventHandler(this.btnopen_Click);
             // 
-            // cbxid
-            // 
-            this.cbxid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxid.FormattingEnabled = true;
-            this.cbxid.Location = new System.Drawing.Point(357, 57);
-            this.cbxid.Name = "cbxid";
-            this.cbxid.Size = new System.Drawing.Size(348, 28);
-            this.cbxid.TabIndex = 30;
-            this.cbxid.SelectedIndexChanged += new System.EventHandler(this.cbxid_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(348, 20);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "ID Pengirim";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(348, 20);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Nama Barang";
-            // 
-            // cbxnm
-            // 
-            this.cbxnm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxnm.FormattingEnabled = true;
-            this.cbxnm.Location = new System.Drawing.Point(357, 103);
-            this.cbxnm.Name = "cbxnm";
-            this.cbxnm.Size = new System.Drawing.Size(348, 28);
-            this.cbxnm.TabIndex = 50;
-            // 
             // resi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.dataGridView1);

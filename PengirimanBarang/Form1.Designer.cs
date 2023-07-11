@@ -75,6 +75,7 @@ namespace PengirimanBarang
             // 
             // dataresi
             // 
+            this.dataresi.BackColor = System.Drawing.Color.MistyRose;
             this.dataresi.Name = "dataresi";
             this.dataresi.Size = new System.Drawing.Size(402, 50);
             this.dataresi.Text = "Data Resi";
@@ -82,6 +83,7 @@ namespace PengirimanBarang
             // 
             // datapengiriman
             // 
+            this.datapengiriman.BackColor = System.Drawing.Color.MistyRose;
             this.datapengiriman.Name = "datapengiriman";
             this.datapengiriman.Size = new System.Drawing.Size(402, 50);
             this.datapengiriman.Text = "Data Pengiriman";
@@ -89,6 +91,7 @@ namespace PengirimanBarang
             // 
             // datapengantaran
             // 
+            this.datapengantaran.BackColor = System.Drawing.Color.MistyRose;
             this.datapengantaran.Name = "datapengantaran";
             this.datapengantaran.Size = new System.Drawing.Size(402, 50);
             this.datapengantaran.Text = "Data Pengantaran";
@@ -96,6 +99,7 @@ namespace PengirimanBarang
             // 
             // datadetail
             // 
+            this.datadetail.BackColor = System.Drawing.Color.MistyRose;
             this.datadetail.Name = "datadetail";
             this.datadetail.Size = new System.Drawing.Size(402, 50);
             this.datadetail.Text = "Data Detail Penerima";

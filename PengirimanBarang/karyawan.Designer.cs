@@ -49,6 +49,7 @@ namespace PengirimanBarang
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(135, 79);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
@@ -132,10 +133,10 @@ namespace PengirimanBarang
             this.idkaryawan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.idkaryawan.AutoSize = true;
             this.idkaryawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idkaryawan.Location = new System.Drawing.Point(4, 19);
+            this.idkaryawan.Location = new System.Drawing.Point(4, 17);
             this.idkaryawan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idkaryawan.Name = "idkaryawan";
-            this.idkaryawan.Size = new System.Drawing.Size(365, 20);
+            this.idkaryawan.Size = new System.Drawing.Size(365, 25);
             this.idkaryawan.TabIndex = 0;
             this.idkaryawan.Text = "ID Karyawan";
             this.idkaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,10 +146,10 @@ namespace PengirimanBarang
             this.nokaryawan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.nokaryawan.AutoSize = true;
             this.nokaryawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nokaryawan.Location = new System.Drawing.Point(4, 137);
+            this.nokaryawan.Location = new System.Drawing.Point(4, 135);
             this.nokaryawan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nokaryawan.Name = "nokaryawan";
-            this.nokaryawan.Size = new System.Drawing.Size(365, 20);
+            this.nokaryawan.Size = new System.Drawing.Size(365, 25);
             this.nokaryawan.TabIndex = 2;
             this.nokaryawan.Text = "No Telepon";
             this.nokaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,10 +159,10 @@ namespace PengirimanBarang
             this.nmkaryawan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.nmkaryawan.AutoSize = true;
             this.nmkaryawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmkaryawan.Location = new System.Drawing.Point(4, 78);
+            this.nmkaryawan.Location = new System.Drawing.Point(4, 75);
             this.nmkaryawan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nmkaryawan.Name = "nmkaryawan";
-            this.nmkaryawan.Size = new System.Drawing.Size(365, 20);
+            this.nmkaryawan.Size = new System.Drawing.Size(365, 25);
             this.nmkaryawan.TabIndex = 1;
             this.nmkaryawan.Text = "Nama";
             this.nmkaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,30 +171,30 @@ namespace PengirimanBarang
             // 
             this.txtkaryawan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtkaryawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtkaryawan.Location = new System.Drawing.Point(377, 16);
+            this.txtkaryawan.Location = new System.Drawing.Point(377, 14);
             this.txtkaryawan.Margin = new System.Windows.Forms.Padding(4);
             this.txtkaryawan.Name = "txtkaryawan";
-            this.txtkaryawan.Size = new System.Drawing.Size(366, 26);
+            this.txtkaryawan.Size = new System.Drawing.Size(366, 30);
             this.txtkaryawan.TabIndex = 3;
             // 
             // txtnmkaryawan
             // 
             this.txtnmkaryawan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtnmkaryawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnmkaryawan.Location = new System.Drawing.Point(377, 75);
+            this.txtnmkaryawan.Location = new System.Drawing.Point(377, 73);
             this.txtnmkaryawan.Margin = new System.Windows.Forms.Padding(4);
             this.txtnmkaryawan.Name = "txtnmkaryawan";
-            this.txtnmkaryawan.Size = new System.Drawing.Size(366, 26);
+            this.txtnmkaryawan.Size = new System.Drawing.Size(366, 30);
             this.txtnmkaryawan.TabIndex = 4;
             // 
             // txtnokaryawan
             // 
             this.txtnokaryawan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtnokaryawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnokaryawan.Location = new System.Drawing.Point(377, 134);
+            this.txtnokaryawan.Location = new System.Drawing.Point(377, 132);
             this.txtnokaryawan.Margin = new System.Windows.Forms.Padding(4);
             this.txtnokaryawan.Name = "txtnokaryawan";
-            this.txtnokaryawan.Size = new System.Drawing.Size(366, 26);
+            this.txtnokaryawan.Size = new System.Drawing.Size(366, 30);
             this.txtnokaryawan.TabIndex = 5;
             // 
             // datakaryawan
@@ -203,7 +204,7 @@ namespace PengirimanBarang
             this.datakaryawan.Location = new System.Drawing.Point(405, 28);
             this.datakaryawan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.datakaryawan.Name = "datakaryawan";
-            this.datakaryawan.Size = new System.Drawing.Size(174, 26);
+            this.datakaryawan.Size = new System.Drawing.Size(201, 30);
             this.datakaryawan.TabIndex = 10;
             this.datakaryawan.Text = "Data Karyawan";
             // 
@@ -221,8 +222,9 @@ namespace PengirimanBarang
             // 
             // karyawan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.dataGridView1);

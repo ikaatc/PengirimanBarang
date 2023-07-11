@@ -24,7 +24,6 @@ namespace PengirimanBarang
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
-            this.bindingNavigator1.BindingSource = this.customersBindingSource;
             refreshform();
         }
 
@@ -38,47 +37,17 @@ namespace PengirimanBarang
             datetime.Enabled = false;
             btnsave.Enabled = false;
             btnclear.Enabled = false;
-            formresi_load();
-            clearBinding();
         }
 
-        private void formresi_load()
+        private void dataGridView()
         {
             koneksi.Open();
-            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("select m.no_resi, p.id_pengirim, k.nm_barang, m.berat_brg, " +
-                "m.harga_pengiriman, m.tgl_pengiriman from dbo.resi m " +
-                "join dbo.pengirim p on m.id_pengirim = p.id_pengirim " +
-                "join dbo.barang k on m.id_barang = k.id_barang", koneksi));
-
+            string str = "select no_resi, id_pengirim, nm_barang, berat_brg, harga_pengiriman, tgl_pengiriman from dbo.resi";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
-            dataAdapter1.Fill(ds);
-
-            this.customersBindingSource.DataSource = ds.Tables[0];
-            this.txtnoresi.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "no_resi", true));
-            this.cbxidpengirim.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "id_pengirim", true));
-            this.cbxnama.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "nm_barang", true));
-            this.txtbrg.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "berat_brg", true));
-            this.txtharga.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "harga_pengiriman", true));
-            this.datetime.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "tgl_pengiriman", true));
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
-
-            this.bindingNavigator1.BindingSource = this.customersBindingSource;
-        }
-
-        private void clearBinding()
-        {
-            this.txtnoresi.DataBindings.Clear();
-            this.cbxidpengirim.DataBindings.Clear();
-            this.cbxnama.DataBindings.Clear();
-            this.txtbrg.DataBindings.Clear();
-            this.txtharga.DataBindings.Clear();
-            this.datetime.DataBindings.Clear();
         }
 
         private void idpengirimtxt()
@@ -190,6 +159,42 @@ namespace PengirimanBarang
             this.Hide();
         }
 
+        private void btnopen_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnopen_Click_1(object sender, EventArgs e)
+        {
+            dataGridView();
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string noResi = dataGridView1.SelectedRows[0].Cells["no_resi"].Value.ToString();
+
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.resi WHERE no_resi = @noResi";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.Parameters.AddWithValue("@noResi", noResi);
+                    cmd.ExecuteNonQuery();
+                    koneksi.Close();
+
+                    MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih baris data yang ingin dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void btnadd_Click(object sender, EventArgs e)
         {
             txtnoresi.Text = "";
@@ -221,35 +226,32 @@ namespace PengirimanBarang
         {
             no = txtnoresi.Text;
             id = cbxidpengirim.Text;
-            nm = cbxnama.SelectedValue.ToString();
+            nm = cbxnama.Text;
             berat = txtbrg.Text;
             harga = txtharga.Text;
             tgl = datetime.Value;
 
             koneksi.Open();
-            string strs = "select id_pengirim, id_barang from dbo.pengirim, dbo.barang " +
-              "where id_pengirim = @idp and nm_barang = @nmb";
+            string strs = "select id_pengirim from dbo.pengirim where id_pengirim = @idp";
             SqlCommand cm = new SqlCommand(strs, koneksi);
             cm.CommandType = CommandType.Text;
             cm.Parameters.Add(new SqlParameter("@idp", id));
-            cm.Parameters.Add(new SqlParameter("@nmb", nm));
-            SqlDataReader dr = cm.ExecuteReader();
-            dr.Close();
-            string str = "insert into dbo.resi (no_resi, id_pengirim, id_barang, tgl_pengiriman, berat_brg, harga_pengiriman) " +
-             "values (@no, @id, @nm, @tgl, @berat, @harga)";
+
+            string str = "insert into dbo.resi(no_resi, id_pengirim, nm_barang, berat_brg, harga_pengiriman, tgl_pengiriman)" +
+                "values (@no, @idp, @nm, @berat, @harga, @tgl)";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add(new SqlParameter("@no", no));
-            cmd.Parameters.Add(new SqlParameter("@id", id));
-            cmd.Parameters.Add(new SqlParameter("@nm", nm));
-            cmd.Parameters.Add(new SqlParameter("@berat", berat));
-            cmd.Parameters.Add(new SqlParameter("@harga", harga));
-            cmd.Parameters.Add(new SqlParameter("@tgl", tgl));
+            cmd.Parameters.AddWithValue("@no", no);
+            cmd.Parameters.AddWithValue("@idp", id);
+            cmd.Parameters.AddWithValue("@nm", nm);
+            cmd.Parameters.AddWithValue("@berat", berat);
+            cmd.Parameters.AddWithValue("@harga", harga);
+            cmd.Parameters.AddWithValue("@tgl", tgl);
             cmd.ExecuteNonQuery();
+
             koneksi.Close();
-
             MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            dataGridView();
             refreshform();
         }
     }

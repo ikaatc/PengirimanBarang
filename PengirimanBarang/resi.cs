@@ -62,5 +62,19 @@ namespace PengirimanBarang
             cbxnama.ValueMember = "id_barang";
             cbxnama.DataSource = ds.Tables[0];
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtno.Enabled = true;
+            cbxid.Enabled = true;
+            cbxnama.Enabled = true;
+            txtberat.Enabled = true;
+            txtharga.Enabled = true;
+            datetime.Enabled = true;
+            idpengirimtxt();
+            nmbarangtxt();
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+        }
     }
 }

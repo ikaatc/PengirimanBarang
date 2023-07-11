@@ -124,6 +124,7 @@ namespace PengirimanBarang
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.Size = new System.Drawing.Size(254, 45);
             this.toolStripDropDownButton2.Text = "Data Pengiriman";
+            this.toolStripDropDownButton2.Click += new System.EventHandler(this.toolStripDropDownButton2_Click);
             // 
             // dataresi
             // 
@@ -137,18 +138,21 @@ namespace PengirimanBarang
             this.datapengiriman.Name = "datapengiriman";
             this.datapengiriman.Size = new System.Drawing.Size(402, 50);
             this.datapengiriman.Text = "Data Pengiriman";
+            this.datapengiriman.Click += new System.EventHandler(this.datapengiriman_Click);
             // 
             // datapengantaran
             // 
             this.datapengantaran.Name = "datapengantaran";
             this.datapengantaran.Size = new System.Drawing.Size(402, 50);
             this.datapengantaran.Text = "Data Pengantaran";
+            this.datapengantaran.Click += new System.EventHandler(this.datapengantaran_Click);
             // 
             // datadetail
             // 
             this.datadetail.Name = "datadetail";
             this.datadetail.Size = new System.Drawing.Size(402, 50);
             this.datadetail.Text = "Data Detail Penerima";
+            this.datadetail.Click += new System.EventHandler(this.datadetail_Click);
             // 
             // Form1
             // 

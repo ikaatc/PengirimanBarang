@@ -73,5 +73,31 @@ namespace PengirimanBarang
             re.Show();
             this.Hide();
         }
+
+        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datapengiriman_Click(object sender, EventArgs e)
+        {
+            pengiriman pe = new pengiriman();
+            pe.Show();
+            this.Hide();
+        }
+
+        private void datapengantaran_Click(object sender, EventArgs e)
+        {
+            Pengantaran penga = new Pengantaran();
+            penga.Show();
+            this.Hide();
+        }
+
+        private void datadetail_Click(object sender, EventArgs e)
+        {
+            detail_penerima det = new detail_penerima();
+            det.Show();
+            this.Hide();
+        }
     }
 }
